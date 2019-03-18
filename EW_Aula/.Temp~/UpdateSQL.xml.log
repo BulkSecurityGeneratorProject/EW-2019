@@ -1,0 +1,32 @@
+[14 Mar 2019 15:04:12] DEBUG Executing SQL script
+[14 Mar 2019 15:04:12] INFO ================================================================================
+[14 Mar 2019 15:04:12] INFO onError= 'stop'
+[14 Mar 2019 15:04:12] INFO autoCommit= 'false'
+[14 Mar 2019 15:04:12] INFO username= 'root'
+[14 Mar 2019 15:04:12] INFO outputPath= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\UpdateSQL.xml'
+[14 Mar 2019 15:04:12] INFO outputLogPath= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\UpdateSQL.xml.log'
+[14 Mar 2019 15:04:12] INFO encoding= ''
+[14 Mar 2019 15:04:12] INFO driverClass= 'com.mysql.jdbc.Driver'
+[14 Mar 2019 15:04:12] INFO sqlScript= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\UpdateSQL.sql'
+[14 Mar 2019 15:04:12] INFO eventSocketPort= '50904'
+[14 Mar 2019 15:04:12] INFO statementSeparator= ';'
+[14 Mar 2019 15:04:12] INFO derby.system.home= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[14 Mar 2019 15:04:12] INFO password= 'root'
+[14 Mar 2019 15:04:12] INFO url= 'jdbc:mysql://localhost:3306/EW_2019'
+[14 Mar 2019 15:04:12] INFO ================================================================================
+[14 Mar 2019 15:04:12] INFO Connecting to the Database...
+[14 Mar 2019 15:04:12] INFO Database connection estabilished
+[14 Mar 2019 15:04:12] INFO transaction isolation: 4
+[14 Mar 2019 15:04:12] DEBUG ================================================================================
+[14 Mar 2019 15:04:12] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\UpdateSQL.sql
+[14 Mar 2019 15:04:12] DEBUG Executing statement:  alter table `aposta`  add column  `user_oid`  integer
+[14 Mar 2019 15:04:12] DEBUG Executing statement:  alter table `aposta`   add index fk_aposta_user (`user_oid`), add constraint fk_aposta_user foreign key (`user_oid`) references `user` (`oid`)
+[14 Mar 2019 15:04:12] DEBUG Executing statement:    create table `evento_aposta` ( `evento_oid`  integer not null, `aposta_oid`  integer not null, primary key (`evento_oid`, `aposta_oid`) )
+[14 Mar 2019 15:04:12] DEBUG Executing statement:  alter table `evento_aposta`   add index fk_evento_aposta_evento (`evento_oid`), add constraint fk_evento_aposta_evento foreign key (`evento_oid`) references `evento` (`oid`)
+[14 Mar 2019 15:04:12] DEBUG Executing statement:  alter table `evento_aposta`   add index fk_evento_aposta_aposta (`aposta_oid`), add constraint fk_evento_aposta_aposta foreign key (`aposta_oid`) references `aposta` (`oid`)
+[14 Mar 2019 15:04:13] DEBUG Executing statement:    alter table `aposta`  add column  `participante_oid`  integer
+[14 Mar 2019 15:04:13] DEBUG Executing statement:  alter table `aposta`   add index fk_aposta_participante (`participante_oid`), add constraint fk_aposta_participante foreign key (`participante_oid`) references `participante` (`oid`)
+[14 Mar 2019 15:04:13] DEBUG ================================================================================
+[14 Mar 2019 15:04:13] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[14 Mar 2019 15:04:13] INFO Database connection closed
+[14 Mar 2019 15:04:13] DEBUG Total time: 682 milliseconds

@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="195" gr:y="0" id="sv2#area1#page4" name="Registo" landmark="false">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area1#page4#enu1" name="Registo" entity="User" fieldOrder="sv2#area1#page4#enu1#fld1 sv2#area1#page4#enu1#fld2 sv2#area1#page4#enu1#fld3 sv2#area1#page4#enu1#fld4" linkOrder="sv2#area1#page4#enu1#ln2">
+      <Field id="sv2#area1#page4#enu1#fld4" name="Plafond" type="decimal" modifiable="true" attribute="User#att19"/>
+      <Field id="sv2#area1#page4#enu1#fld3" name="Password" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv2#area1#page4#enu1#fld2" name="Nome" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv2#area1#page4#enu1#fld1" name="Email" type="string" modifiable="true" attribute="email"/>
+      <Link id="sv2#area1#page4#enu1#ln2" name="Submeter" to="sv2#cru1" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area1#page4#enu1">
+          <layout:Field field="sv2#area1#page4#enu1#fld1"/>
+          <layout:Field field="sv2#area1#page4#enu1#fld2"/>
+          <layout:Field field="sv2#area1#page4#enu1#fld3"/>
+          <layout:Field field="sv2#area1#page4#enu1#fld4"/>
+          <layout:Link link="sv2#area1#page4#enu1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

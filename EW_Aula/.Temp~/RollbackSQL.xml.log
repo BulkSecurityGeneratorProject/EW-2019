@@ -1,0 +1,48 @@
+[14 Mar 2019 15:01:53] DEBUG Executing SQL script
+[14 Mar 2019 15:01:53] INFO ================================================================================
+[14 Mar 2019 15:01:53] INFO onError= 'stop'
+[14 Mar 2019 15:01:53] INFO autoCommit= 'false'
+[14 Mar 2019 15:01:53] INFO username= 'root'
+[14 Mar 2019 15:01:53] INFO outputPath= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\RollbackSQL.xml'
+[14 Mar 2019 15:01:53] INFO outputLogPath= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\RollbackSQL.xml.log'
+[14 Mar 2019 15:01:53] INFO encoding= ''
+[14 Mar 2019 15:01:53] INFO driverClass= 'com.mysql.jdbc.Driver'
+[14 Mar 2019 15:01:53] INFO sqlScript= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\RollbackSQL.sql'
+[14 Mar 2019 15:01:53] INFO eventSocketPort= '50575'
+[14 Mar 2019 15:01:53] INFO statementSeparator= ';'
+[14 Mar 2019 15:01:53] INFO derby.system.home= 'C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[14 Mar 2019 15:01:53] INFO password= 'root'
+[14 Mar 2019 15:01:53] INFO url= 'jdbc:mysql://localhost:3306/EW_2019'
+[14 Mar 2019 15:01:53] INFO ================================================================================
+[14 Mar 2019 15:01:53] INFO Connecting to the Database...
+[14 Mar 2019 15:01:53] INFO Database connection estabilished
+[14 Mar 2019 15:01:53] INFO transaction isolation: 4
+[14 Mar 2019 15:01:53] DEBUG ================================================================================
+[14 Mar 2019 15:01:53] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\RollbackSQL.sql
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `aposta`   drop foreign key `fk_aposta_evento`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `aposta`  drop column  `evento_oid`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `aposta`   drop foreign key `fk_aposta_user`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `aposta`  drop column  `user_oid`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `participante_evento`   drop foreign key `fk_participante_evento_evento`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `participante_evento`   drop foreign key `fk_participante_evento_partici`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `participante_evento`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `user_group`   drop foreign key `fk_user_group_group`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `user_group`   drop foreign key `fk_user_group_user`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `user_group`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `user`   drop foreign key `fk_user_group`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `user`  drop column  `group_oid`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `group_module`   drop foreign key `fk_group_module_module`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `group_module`   drop foreign key `fk_group_module_group`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `group_module`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `group`   drop foreign key `fk_group_module`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  alter table `group`  drop column  `module_oid`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `aposta`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `participante`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `evento`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `user`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `module`
+[14 Mar 2019 15:01:53] DEBUG Executing statement:  drop table `group`
+[14 Mar 2019 15:01:53] DEBUG ================================================================================
+[14 Mar 2019 15:01:53] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[14 Mar 2019 15:01:53] INFO Database connection closed
+[14 Mar 2019 15:01:53] DEBUG Total time: 696 milliseconds

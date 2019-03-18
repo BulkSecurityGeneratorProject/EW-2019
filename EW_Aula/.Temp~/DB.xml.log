@@ -1,0 +1,105 @@
+[14 Mar 2019 15:04:13] Building database metadata model
+[14 Mar 2019 15:04:13] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@4eb24759, includeTables=true, username=root, outputLogPath=C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\EW_Aula\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Community Platform 7.2.17.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:mysql://localhost:3306/EW_2019, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=50909}
+[14 Mar 2019 15:04:13] URL: jdbc:mysql://localhost:3306/EW_2019
+[14 Mar 2019 15:04:13] Product name: MySQL
+[14 Mar 2019 15:04:13] Product version: 5.7.22-log
+[14 Mar 2019 15:04:13] Driver name: MySQL Connector Java
+[14 Mar 2019 15:04:13] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[14 Mar 2019 15:04:13] Driver major version: 5
+[14 Mar 2019 15:04:13] Driver minor version: 1
+[14 Mar 2019 15:04:13] Identifier quote string: 1
+[14 Mar 2019 15:04:13] Retrieving schemas
+[14 Mar 2019 15:04:13] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[14 Mar 2019 15:04:13]   Found 'aposta' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'evento' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'evento_aposta' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'group' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'group_module' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'module' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'participante' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'participante_evento' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'user' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found 'user_group' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving columns for 'aposta' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: estado [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: montante [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: participante_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'aposta' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'evento' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: horainicio [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: horafim [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: n_participantes [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: estado [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: vencedor [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: evento_equipa [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: odd_empate [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'evento' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'evento_aposta' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: evento_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: aposta_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'evento_aposta' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: evento_oid
+[14 Mar 2019 15:04:13]   Found primary key column: aposta_oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'group' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'group' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'group_module' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'group_module' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: group_oid
+[14 Mar 2019 15:04:13]   Found primary key column: module_oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'module' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'module' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'participante' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: odd_vencer [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: equipa [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'participante' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'participante_evento' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: participante_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: evento_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'participante_evento' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: participante_oid
+[14 Mar 2019 15:04:13]   Found primary key column: evento_oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'user' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: plafond [type = NUMERIC][SQL/XOPEN type = 2][size = 19][dec. digits = 2]
+[14 Mar 2019 15:04:13]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'user' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: oid
+[14 Mar 2019 15:04:13] Retrieving columns for 'user_group' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[14 Mar 2019 15:04:13] Retrieving primary keys for 'user_group' [type = TABLE]
+[14 Mar 2019 15:04:13]   Found primary key column: user_oid
+[14 Mar 2019 15:04:13]   Found primary key column: group_oid
+[14 Mar 2019 15:04:13] Database metadata retrieved (82 ms)
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'aposta' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'evento' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'evento_aposta' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'group' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'module' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'participante' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'participante_evento' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'user' [type = TABLE]
+[14 Mar 2019 15:04:13] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[14 Mar 2019 15:04:13] Database connection closed

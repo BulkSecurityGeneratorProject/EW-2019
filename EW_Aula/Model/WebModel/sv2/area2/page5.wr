@@ -1,0 +1,46 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="150" gr:y="0" id="sv2#area2#page5" name="Apostas" landmark="true">
+  <ContentUnits>
+    <MultiDataUnit gr:x="120" gr:y="0" id="sv2#area2#page5#mdu2" name="Apostas" entity="ent5"/>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area2#page5#enu2" name="NovaAposta" entity="ent5" fieldOrder="sv2#area2#page5#enu2#fld7 sv2#area2#page5#enu2#sfld2">
+      <SelectionField id="sv2#area2#page5#enu2#sfld2" name="Participante" type="string" modifiable="true"/>
+      <Field id="sv2#area2#page5#enu2#fld7" name="Montante" type="string" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page5#mdu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page5#enu2">
+          <layout:Field field="sv2#area2#page5#enu2#fld7"/>
+          <layout:Field field="sv2#area2#page5#enu2#sfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
