@@ -1,0 +1,28 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="345" gr:y="755" id="sv2#area3#page25" name="Erro">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area3#page25#mssu8" name="Erro" linkOrder="sv2#area3#page25#mssu8#ln56">
+      <Message xml:space="preserve">A Opera&#231;&#227;o falhou! Por favor tente novamente.</Message>
+      <Link id="sv2#area3#page25#mssu8#ln56" name="Voltar a Lista de Uitilizadores" to="sv2#area3#area4#page11" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page25#mssu8">
+          <layout:Link link="sv2#area3#page25#mssu8#ln56"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

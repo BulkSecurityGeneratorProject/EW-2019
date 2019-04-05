@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="945" gr:y="30" id="sv2#area3#page16" name="Sucesso">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area3#page16#mssu3" name="Sucesso" linkOrder="sv2#area3#page16#mssu3#ln31 sv2#area3#page16#mssu3#ln35">
+      <Message xml:space="preserve">Opera&#231;&#227;o executada com sucesso!</Message>
+      <Link id="sv2#area3#page16#mssu3#ln31" name="Ver Lista de Eventos" to="sv2#area3#area4#page13" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area3#page16#mssu3#ln35" name="Criar novo Evento" to="sv2#area3#area5#page14" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page16#mssu3">
+          <layout:Link link="sv2#area3#page16#mssu3#ln31"/>
+          <layout:Link link="sv2#area3#page16#mssu3#ln35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,1 @@
+Os modulos são as areas/paginas que queremos proteger, ou seja, tem algum tipo de acesso restrito.

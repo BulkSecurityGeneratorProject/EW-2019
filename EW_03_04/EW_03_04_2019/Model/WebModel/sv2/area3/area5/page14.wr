@@ -1,0 +1,82 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3#area5#page14" name="Eventos" landmark="true" gr:x="10" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv2#area3#area5#page14#enu6" name="Novo Evento" linkOrder="sv2#area3#area5#page14#enu6#ln22" gr:x="0" gr:y="0" entity="ent3" fieldOrder="sv2#area3#area5#page14#enu6#fld15 sv2#area3#area5#page14#enu6#fld21 sv2#area3#area5#page14#enu6#fld20 sv2#area3#area5#page14#enu6#sfld1 sv2#area3#area5#page14#enu6#fld16 sv2#area3#area5#page14#enu6#fld17 sv2#area3#area5#page14#enu6#fld31">
+      <Link id="sv2#area3#area5#page14#enu6#ln22" name="Criar" to="sv2#cru5" type="normal" validate="true">
+        <LinkParameter id="sv2#area3#area5#page14#enu6#ln22#par12" name="Abero_Estado" sourceValue="Aberto" target="sv2#cru5.ent3#att11"/>
+        <LinkParameter id="sv2#area3#area5#page14#enu6#ln22#par13" name="Evento Object_Evento Object" source="entityBean" target="sv2#cru5.entityBeans"/>
+      </Link>
+      <Field id="sv2#area3#area5#page14#enu6#fld15" name="Data/Hora  de Inicio" type="timestamp" modifiable="true" attribute="ent3#att8"/>
+      <Field id="sv2#area3#area5#page14#enu6#fld16" name="N&#186; Participantes" type="integer" modifiable="true" attribute="ent3#att10">
+        <Comment xml:space="preserve">Minimo de participantes: 2</Comment>
+      </Field>
+      <Field id="sv2#area3#area5#page14#enu6#fld17" name="% Empate" type="float" modifiable="true" attribute="ent3#att14"/>
+      <Field id="sv2#area3#area5#page14#enu6#fld18" name="Vencedor" type="string" hidden="true" attribute="ent3#att12"/>
+      <SelectionField id="sv2#area3#area5#page14#enu6#sfld1" name="Evento de Equipas?" type="boolean" modifiable="true" slotOrder="sv2#area3#area5#page14#enu6#sfld1#slot4 sv2#area3#area5#page14#enu6#sfld1#slot5" attribute="ent3#att13">
+        <Slot id="sv2#area3#area5#page14#enu6#sfld1#slot4" name="Sim" value="true" label="true" output="true"/>
+        <Slot id="sv2#area3#area5#page14#enu6#sfld1#slot5" name="N&#227;o" value="false" label="true" output="true"/>
+      </SelectionField>
+      <Field id="sv2#area3#area5#page14#enu6#fld20" name="Desporto" type="string" modifiable="true" attribute="ent3#att1"/>
+      <Field id="sv2#area3#area5#page14#enu6#fld21" name="Data/Fim de Fim" type="timestamp" modifiable="true" attribute="ent3#att9"/>
+      <Field id="sv2#area3#area5#page14#enu6#fld30" name="Estado" type="string" hidden="true" attribute="ent3#att11"/>
+      <Field id="sv2#area3#area5#page14#enu6#fld31" name="Visibilidade" type="string" preloaded="true" modifiable="true" slotOrder="sv2#area3#area5#page14#enu6#fld31#slot13 sv2#area3#area5#page14#enu6#fld31#slot14">
+        <Slot id="sv2#area3#area5#page14#enu6#fld31#slot13" name="Publico" value="Publico" label="true" output="true"/>
+        <Slot id="sv2#area3#area5#page14#enu6#fld31#slot14" name="Privado" value="Privado" label="true" output="true"/>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#area5#page14#enu6">
+          <layout:Link link="sv2#area3#area5#page14#enu6#ln22"/>
+          <layout:Field field="sv2#area3#area5#page14#enu6#fld15"/>
+          <layout:Field field="sv2#area3#area5#page14#enu6#fld21"/>
+          <layout:Field field="sv2#area3#area5#page14#enu6#fld20"/>
+          <layout:Field field="sv2#area3#area5#page14#enu6#sfld1"/>
+          <layout:Field field="sv2#area3#area5#page14#enu6#fld16"/>
+          <layout:Field field="sv2#area3#area5#page14#enu6#fld17"/>
+          <layout:Field field="sv2#area3#area5#page14#enu6#fld31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

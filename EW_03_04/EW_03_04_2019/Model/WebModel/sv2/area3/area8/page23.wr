@@ -1,0 +1,41 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="555" id="sv2#area3#area8#page23" name="Editar Utilizador">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area3#area8#page23#enu9" name="Editar Utilizador" entity="User" fieldOrder="sv2#area3#area8#page23#enu9#fld33 sv2#area3#area8#page23#enu9#fld38 sv2#area3#area8#page23#enu9#fld35 sv2#area3#area8#page23#enu9#fld36 sv2#area3#area8#page23#enu9#msfld2" linkOrder="sv2#area3#area8#page23#enu9#ln57 sv2#area3#area8#page23#enu9#ln58">
+      <Field id="sv2#area3#area8#page23#enu9#fld36" name="Plafond" type="decimal" modifiable="true" attribute="User#att19"/>
+      <Field id="sv2#area3#area8#page23#enu9#fld35" name="Password" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv2#area3#area8#page23#enu9#fld38" name="Email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv2#area3#area8#page23#enu9#fld33" name="Nome" type="string" modifiable="true" attribute="userName"/>
+      <MultiSelectionField id="sv2#area3#area8#page23#enu9#msfld2" name="Grupo" type="string" modifiable="true" role="User2Group" slotOrder="sv2#area3#area8#page23#enu9#msfld2#slot17">
+        <Slot id="sv2#area3#area8#page23#enu9#msfld2#slot17" name="Normal" value="3" label="true" output="true"/>
+      </MultiSelectionField>
+      <Link id="sv2#area3#area8#page23#enu9#ln57" name="Cancelar" to="sv2#area3#area4#page11#inu2" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="259,9,-276,19"/>
+      <Link id="sv2#area3#area8#page23#enu9#ln58" name="OK" to="sv2#area3#mfu2" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#area8#page23#enu9">
+          <layout:Field field="sv2#area3#area8#page23#enu9#fld33"/>
+          <layout:Field field="sv2#area3#area8#page23#enu9#fld38"/>
+          <layout:Field field="sv2#area3#area8#page23#enu9#fld35"/>
+          <layout:Field field="sv2#area3#area8#page23#enu9#fld36"/>
+          <layout:Field field="sv2#area3#area8#page23#enu9#msfld2"/>
+          <layout:Link link="sv2#area3#area8#page23#enu9#ln57"/>
+          <layout:Link link="sv2#area3#area8#page23#enu9#ln58"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

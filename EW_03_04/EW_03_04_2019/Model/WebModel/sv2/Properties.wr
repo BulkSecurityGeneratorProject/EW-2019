@@ -1,0 +1,27 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Views" landmarks="sv2#area1 sv2#area3 sv2#area2" homePage="sv2#area1#page26">
+  <OperationUnits>
+    <CreateUnit gr:x="175" gr:y="465" id="sv2#cru1" name="Registo" entity="User">
+      <KOLink id="sv2#cru1#kln14" name="KOFlow14" to="sv2#area1#page29" automaticCoupling="true"/>
+      <OKLink id="sv2#cru1#oln19" name="OKFlow19" to="sv2#area1#page28" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="1430" gr:y="310" id="sv2#cru5" name="Cria_Eventos" entity="ent3">
+      <OKLink id="sv2#cru5#oln13" name="OKFlow13" to="sv2#area3#page16" automaticCoupling="true"/>
+      <KOLink id="sv2#cru5#kln8" name="KOFlow8" to="sv2#area3#page17" automaticCoupling="true"/>
+    </CreateUnit>
+    <DeleteUnit gr:x="1435" gr:y="470" id="sv2#dlu1" name="Apaga_Eventos" entity="ent3">
+      <Selector id="sv2#dlu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu1#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="sv2#dlu1#kln9" name="KOFlow9" to="sv2#area3#page17" automaticCoupling="true"/>
+      <OKLink id="sv2#dlu1#oln14" name="OKFlow14" to="sv2#area3#page16#mssu3" automaticCoupling="true"/>
+    </DeleteUnit>
+    <ModifyUnit gr:x="1000" gr:y="375" id="sv2#mfu1" name="Modifica_Eventos" entity="ent3">
+      <Selector id="sv2#mfu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu1#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu1#oln17" name="OKFlow17" to="sv2#area3#page21" automaticCoupling="true"/>
+      <KOLink id="sv2#mfu1#kln12" name="KOFlow12" to="sv2#area3#page22" automaticCoupling="true"/>
+    </ModifyUnit>
+    <LoginUnit gr:x="735" gr:y="300" id="sv2#lgu3" name="Login"/>
+  </OperationUnits>
+</SiteView>

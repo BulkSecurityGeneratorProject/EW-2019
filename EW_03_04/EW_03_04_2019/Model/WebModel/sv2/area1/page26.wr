@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="85" gr:y="0" id="sv2#area1#page26" name="Pagina Inicial" linkOrder="sv2#area1#page26#ln59 sv2#area1#page26#ln62">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area1#page26#mssu10" name="Incio">
+      <Message xml:space="preserve">Bem-vindo(a) a plataforma de apostas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Engenharia Web UMinho - 2019</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area1#page26#mssu10"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#area1#page26#ln59" name="Login" to="sv2#area1#page3#enu3" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv2#area1#page26#ln62" name="J&#225; tem conta? (Registar)" to="sv2#area1#page4" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

@@ -1,0 +1,29 @@
+[03 Abr 2019 17:26:13] Building database metadata model
+[03 Abr 2019 17:26:13] Properties: {partialRefresh=true, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@1d8f59e3, includeTables=true, username=root, outputLogPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\EW_03_04_2019\.Temp~\DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\EW_03_04_2019\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:mysql://localhost:3306/EW_2019, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=evento, eventSocketPort=58178}
+[03 Abr 2019 17:26:13] URL: jdbc:mysql://localhost:3306/EW_2019
+[03 Abr 2019 17:26:13] Product name: MySQL
+[03 Abr 2019 17:26:13] Product version: 5.7.22-log
+[03 Abr 2019 17:26:13] Driver name: MySQL Connector Java
+[03 Abr 2019 17:26:13] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[03 Abr 2019 17:26:13] Driver major version: 5
+[03 Abr 2019 17:26:13] Driver minor version: 1
+[03 Abr 2019 17:26:13] Identifier quote string: 1
+[03 Abr 2019 17:26:13] Retrieving schemas
+[03 Abr 2019 17:26:13] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[03 Abr 2019 17:26:13]   Found 'evento' [type = TABLE]
+[03 Abr 2019 17:26:13] Retrieving columns for 'evento' [type = TABLE]
+[03 Abr 2019 17:26:13]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: horainicio [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: horafim [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: n_participantes [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: estado [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: vencedor [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: evento_equipa [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: odd_empate [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: desporto [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[03 Abr 2019 17:26:13]   Found column: visibilidade [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[03 Abr 2019 17:26:13] Retrieving primary keys for 'evento' [type = TABLE]
+[03 Abr 2019 17:26:13]   Found primary key column: oid
+[03 Abr 2019 17:26:13] Database metadata retrieved (28 ms)
+[03 Abr 2019 17:26:13] Retrieving auto-increment columns for 'evento' [type = TABLE]
+[03 Abr 2019 17:26:13] Database connection closed

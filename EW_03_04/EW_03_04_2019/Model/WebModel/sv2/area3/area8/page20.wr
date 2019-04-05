@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area3#area8#page20" name="Editar Evento">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area3#area8#page20#enu8" name="Editar Evento" entity="ent3" linkOrder="sv2#area3#area8#page20#enu8#ln49 sv2#area3#area8#page20#enu8#ln50" fieldOrder="sv2#area3#area8#page20#enu8#fld27 sv2#area3#area8#page20#enu8#fld28 sv2#area3#area8#page20#enu8#fld26 sv2#area3#area8#page20#enu8#fld23 sv2#area3#area8#page20#enu8#fld24 sv2#area3#area8#page20#enu8#fld25 sv2#area3#area8#page20#enu8#fld29 sv2#area3#area8#page20#enu8#msfld1 sv2#area3#area8#page20#enu8#fld32">
+      <Link id="sv2#area3#area8#page20#enu8#ln49" name="Ok" to="sv2#mfu1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area3#area8#page20#enu8#ln50" name="Cancelar" to="sv2#area3#area4#page13#inu3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="272,12,-283,17"/>
+      <Field id="sv2#area3#area8#page20#enu8#fld25" name="Vencedor" type="string" modifiable="true" preloaded="true" attribute="ent3#att12"/>
+      <Field id="sv2#area3#area8#page20#enu8#fld24" name="N&#186; Participantes" type="integer" modifiable="true" preloaded="true" attribute="ent3#att10"/>
+      <Field id="sv2#area3#area8#page20#enu8#fld23" name="Evento de Equipas?" type="boolean" modifiable="true" slotOrder="sv2#area3#area8#page20#enu8#fld23#slot6 sv2#area3#area8#page20#enu8#fld23#slot7" preloaded="true" attribute="ent3#att13">
+        <Slot id="sv2#area3#area8#page20#enu8#fld23#slot6" name="Sim" value="true" label="true" output="true"/>
+        <Slot id="sv2#area3#area8#page20#enu8#fld23#slot7" name="N&#227;o" value="false" label="true" output="true"/>
+      </Field>
+      <Field id="sv2#area3#area8#page20#enu8#fld29" name="% Empate" type="float" preloaded="true" modifiable="true" attribute="ent3#att14"/>
+      <Field id="sv2#area3#area8#page20#enu8#fld26" name="Deporto" type="string" preloaded="true" modifiable="true" attribute="ent3#att1"/>
+      <Field id="sv2#area3#area8#page20#enu8#fld28" name="Data/Hora de Fim" type="timestamp" preloaded="true" modifiable="true" attribute="ent3#att9"/>
+      <Field id="sv2#area3#area8#page20#enu8#fld27" name="Data/Hora de Inicio" type="timestamp" preloaded="true" modifiable="true" attribute="ent3#att8"/>
+      <MultiSelectionField id="sv2#area3#area8#page20#enu8#msfld1" name="Estado" type="string" modifiable="true" slotOrder="sv2#area3#area8#page20#enu8#msfld1#slot10 sv2#area3#area8#page20#enu8#msfld1#slot11" role="rel7#role13" splitOutput="true">
+        <Slot id="sv2#area3#area8#page20#enu8#msfld1#slot10" name="Aberto" value="Aberto" label="true" output="true"/>
+        <Slot id="sv2#area3#area8#page20#enu8#msfld1#slot11" name="Fechado" value="Fechado" label="true" output="true"/>
+      </MultiSelectionField>
+      <Field id="sv2#area3#area8#page20#enu8#fld32" name="Visibilidade" type="string" preloaded="true" modifiable="true" slotOrder="sv2#area3#area8#page20#enu8#fld32#slot15 sv2#area3#area8#page20#enu8#fld32#slot16">
+        <Slot id="sv2#area3#area8#page20#enu8#fld32#slot15" name="Publico" value="Publico" label="true" output="true"/>
+        <Slot id="sv2#area3#area8#page20#enu8#fld32#slot16" name="Privado" value="Privado" label="true" output="true"/>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#area8#page20#enu8">
+          <layout:Link link="sv2#area3#area8#page20#enu8#ln49"/>
+          <layout:Link link="sv2#area3#area8#page20#enu8#ln50"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld27"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld28"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld26"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld23"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld24"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld25"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld29"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#msfld1"/>
+          <layout:Field field="sv2#area3#area8#page20#enu8#fld32"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

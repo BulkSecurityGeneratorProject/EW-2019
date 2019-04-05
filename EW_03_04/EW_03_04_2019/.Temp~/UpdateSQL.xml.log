@@ -1,0 +1,26 @@
+[03 Abr 2019 17:26:12] DEBUG Executing SQL script
+[03 Abr 2019 17:26:12] INFO ================================================================================
+[03 Abr 2019 17:26:12] INFO onError= 'stop'
+[03 Abr 2019 17:26:12] INFO autoCommit= 'false'
+[03 Abr 2019 17:26:12] INFO username= 'root'
+[03 Abr 2019 17:26:12] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\EW_03_04_2019\.Temp~\UpdateSQL.xml'
+[03 Abr 2019 17:26:12] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\EW_03_04_2019\.Temp~\UpdateSQL.xml.log'
+[03 Abr 2019 17:26:12] INFO encoding= ''
+[03 Abr 2019 17:26:12] INFO driverClass= 'com.mysql.jdbc.Driver'
+[03 Abr 2019 17:26:12] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\EW_03_04_2019\.Temp~\UpdateSQL.sql'
+[03 Abr 2019 17:26:12] INFO eventSocketPort= '58172'
+[03 Abr 2019 17:26:12] INFO statementSeparator= ';'
+[03 Abr 2019 17:26:12] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[03 Abr 2019 17:26:12] INFO password= 'root'
+[03 Abr 2019 17:26:12] INFO url= 'jdbc:mysql://localhost:3306/EW_2019'
+[03 Abr 2019 17:26:12] INFO ================================================================================
+[03 Abr 2019 17:26:12] INFO Connecting to the Database...
+[03 Abr 2019 17:26:12] INFO Database connection estabilished
+[03 Abr 2019 17:26:12] INFO transaction isolation: 4
+[03 Abr 2019 17:26:12] DEBUG ================================================================================
+[03 Abr 2019 17:26:12] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\EW_03_04_2019\.Temp~\UpdateSQL.sql
+[03 Abr 2019 17:26:13] DEBUG Executing statement:  alter table `evento`  add column  `visibilidade`  varchar(255)
+[03 Abr 2019 17:26:13] DEBUG ================================================================================
+[03 Abr 2019 17:26:13] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[03 Abr 2019 17:26:13] INFO Database connection closed
+[03 Abr 2019 17:26:13] DEBUG Total time: 360 milliseconds

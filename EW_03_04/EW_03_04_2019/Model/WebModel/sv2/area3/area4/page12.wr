@@ -1,0 +1,26 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3#area4#page12" name="Apostas" landmark="true" gr:x="15" gr:y="320">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#area3#area4#page12#inu1" name="Lista de Apostas" entity="ent5" displayAttributes="ent5#att29 ent5#att30"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#area4#page12#inu1">
+          <layout:Attribute attribute="ent5#att29"/>
+          <layout:Attribute attribute="ent5#att30"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

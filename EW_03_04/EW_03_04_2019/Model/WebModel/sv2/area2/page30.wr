@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="150" id="sv2#area2#page30" name="Eventos_Publicos" landmark="true">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#area2#page30#inu4" name="Eventos" entity="ent3" displayAttributes="ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13 ent3#att14 ent3#att1 ent3#att2" linkOrder="sv2#area2#page30#inu4#ln67">
+      <Link id="sv2#area2#page30#inu4#ln67" name="Apostar" to="sv2#area2#page5#enu2" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page30#inu4">
+          <layout:Attribute attribute="ent3#att8"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att13"/>
+          <layout:Attribute attribute="ent3#att14"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att2"/>
+          <layout:Link link="sv2#area2#page30#inu4#ln67"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,30 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="945" gr:y="470" id="sv2#area3#page18" name="Sucesso">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area3#page18#mssu4" name="Sucesso" linkOrder="sv2#area3#page18#mssu4#ln39 sv2#area3#page18#mssu4#ln40">
+      <Message xml:space="preserve">Opera&#231;&#227;o executada com sucesso!</Message>
+      <Link id="sv2#area3#page18#mssu4#ln39" name="Criar novo Utilizador" to="sv2#area3#area5#page15" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area3#page18#mssu4#ln40" name="Ver Lista de Utilizadores" to="sv2#area3#area4#page11" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page18#mssu4">
+          <layout:Link link="sv2#area3#page18#mssu4#ln39"/>
+          <layout:Link link="sv2#area3#page18#mssu4#ln40"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

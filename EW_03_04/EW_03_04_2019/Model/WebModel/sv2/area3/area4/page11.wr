@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3#area4#page11" name="Utilizadores" landmark="true" gr:x="0" gr:y="550">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#area3#area4#page11#inu2" name="Lista de Utilizadores" entity="User" displayAttributes="userName password email User#att19" linkOrder="sv2#area3#area4#page11#inu2#ln43 sv2#area3#area4#page11#inu2#ln51">
+      <Link id="sv2#area3#area4#page11#inu2#ln43" name="Remover" to="sv2#area3#dlu2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area3#area4#page11#inu2#ln51" name="Editar" to="sv2#area3#area8#page23#enu9" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#area4#page11#inu2">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att19"/>
+          <layout:Link link="sv2#area3#area4#page11#inu2#ln43"/>
+          <layout:Link link="sv2#area3#area4#page11#inu2#ln51"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
