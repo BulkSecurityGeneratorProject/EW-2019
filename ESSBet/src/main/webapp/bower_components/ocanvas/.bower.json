@@ -1,0 +1,14 @@
+{
+  "name": "ocanvas",
+  "homepage": "https://github.com/koggdal/ocanvas",
+  "version": "2.8.6",
+  "_release": "2.8.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.8.6",
+    "commit": "02c0379ef2660814f4cf01dd3a9eea0cbafc05ec"
+  },
+  "_source": "https://github.com/koggdal/ocanvas.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/koggdal/ocanvas.git"
+}

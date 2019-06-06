@@ -1,0 +1,86 @@
+.override-li-notifications {
+    background: none!important;
+}
+
+.override-li-notifications:hover {
+    border-top: none!important;
+}
+
+.fa-envelope-open:hover {
+    color: #008CBA !important;
+}
+
+.fa-envelope:hover {
+    color: #008CBA !important;
+}
+
+.fa-trash:hover {
+    color: #008CBA !important;
+}
+
+.fa-ban:hover {
+    color: #008CBA !important;
+}
+
+.fa-recycle:hover {
+    color: #008CBA !important;
+}
+
+.checkbox-selected {
+    background-color: rgba(255, 249, 0, 0.34) !important;
+    border-color: transparent !important;
+    border-top: 2px solid rgba(204, 204, 204, 0.34)!important;
+}
+
+.checkbox-selected:hover {
+    background-color: rgba(255, 249, 0, 0.34) !important;
+    border-top: 2px solid rgba(204, 204, 204, 0.34)!important;
+}
+
+.notifications-popover {
+    padding: 0px;
+    margin: 0px 0px!important;
+    width: 350px;
+}
+
+.notifications-li {
+    border-top: 2px solid rgba(204, 204, 204, 0.34);
+}
+
+.notifications-li:hover {
+    background-color: #f4f4f4;
+}
+
+.unread-notification {
+    font-weight: bold;
+    background-color: rgba(172, 196, 232, 0.388235);
+}
+
+.notification-title {
+    z-index: 1000;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 13px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.notifications-body {
+    min-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.notification-footer {
+    background-color: #e9eaed;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 12px;
+    border-top: 1px solid #dddddd;
+    border-radius: 0px;
+}

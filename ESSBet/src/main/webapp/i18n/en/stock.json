@@ -1,0 +1,11 @@
+{
+    "stock": {
+        "title": "Stock information",
+        "modal1": {
+            "transit": "Add stock in transit",
+            "date": "Date em stock will be available",
+            "button": "Add Stock",
+            "button1": "Cancel"
+        }
+    }
+}

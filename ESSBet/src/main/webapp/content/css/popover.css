@@ -1,0 +1,225 @@
+.popover {
+    border-radius: 0px;
+}
+
+.popover-title {
+    background-color: rgb(0, 86, 145);
+    color: #FFF;
+    border-radius: 0px;
+}
+
+.popover-title-1001 {
+    background-color: rgb(0, 98, 73);
+}
+
+.popover-title-1002 {
+    background-color: rgb(0, 86, 145);
+}
+
+.popover-title-1003 {
+    background-color: rgb(255, 174, 0);
+}
+
+.popover-title-1004 {
+    background-color: rgb(226, 0, 21);
+}
+
+.popover-content {
+    padding: 0px 0px;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.popover-content-map {
+    height: 180px;
+    width: 275px;
+    margin: 0px 15px;
+    padding: 0px 10px;
+}
+
+.popover-content-confirmation {
+    height: 215px;
+    width: 260px;
+    margin: 0px 15px;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.popover-content-supermarket {
+    height: 130px;
+    width: 275px;
+    margin: 0px 0px;
+    padding: 15px 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #C1CCDA !important;
+}
+
+.list-style {
+    list-style-type: none;
+}
+
+.list-item-style {
+    font-size: 11px;
+}
+
+.number-circle-valid {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    background: rgb(0, 98, 73);
+    color: #FFF;
+    font-size: 10px;
+}
+
+.number-circle-1001 {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    background: rgb(0, 98, 73);
+    color: #FFF;
+    font-size: 10px;
+}
+
+.number-circle-1002 {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 25px;
+    background: rgb(0, 86, 145);
+    color: #FFF;
+    font-size: 9px;
+}
+
+.number-circle-1003 {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    background: rgb(255, 174, 0);
+    color: #FFF;
+    font-size: 10px;
+}
+
+.number-circle-1004 {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    background: rgb(226, 0, 21);
+    color: #FFF;
+    font-size: 10px;
+}
+
+.number-circle-invalid {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    background: rgb(226, 0, 21);
+    color: #FFF;
+    font-size: 10px;
+}
+
+.number-circle-warning {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    background: rgb(255, 174, 0);
+    color: #FFF;
+    font-size: 10px;
+}
+
+.quantity {
+    font-size: 16px;
+}
+
+.text-incomplete {
+    margin-top: 15px;
+    font-size: 9px;
+}
+
+.slick-slider {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.slick-list.draggable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slick-frame {
+    visibility: hidden;
+}
+
+.slick-frame.slick-initialized {
+    visibility: visible;
+}
+
+.remove-margin-bottom {
+    margin-bottom: 0px;
+}
+
+.margin-bottom {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.modal-md {
+    width: 500px!important;
+    max-width: 500px!important;
+    overflow: hidden!important;
+    margin: 0px!important;
+    float: right!important;
+    height: 100%!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.modal-lg {
+    width: 910px!important;
+    max-width: 910px!important;
+    overflow: hidden!important;
+    margin: 0px!important;
+    float: right!important;
+    height: 100%!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.modal.fade:not(.in) .modal-dialog {
+    -webkit-transform: translate3d(25%, 0, 0)!important;
+    transform: translate3d(25%, 0, 0)!important;
+}
+
+.modal-lg>.modal-content,
+.modal-md>.modal-content {
+    height: 100%!important;
+    min-height: 100%;
+    border-radius: 0;
+}
+
+.nav-tabs>li>a {
+    border-radius: 0!important;
+    margin: 0px!important;
+    border: 1px solid #ccc!important;
+    color: black!important;
+}
+
+.nav-tabs>li.active>a {
+    font-weight: bold!important;
+}

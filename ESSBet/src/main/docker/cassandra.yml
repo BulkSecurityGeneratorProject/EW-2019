@@ -1,0 +1,21 @@
+version: '2'
+services:
+    crisesweb-cassandra:
+        container_name: crisesweb-cassandra
+        image: cassandra:3.9
+        # volumes:
+        #     - ~/volumes/jhipster/CrisesWeb/cassandra/:/var/lib/cassandra/data
+        ports:
+            - 7000:7000
+            - 7001:7001
+            - 7199:7199
+            - 9042:9042
+            - 9160:9160
+    crisesweb-cassandra-migration:
+        extends:
+            file: cassandra-migration.yml
+            service: crisesweb-cassandra-migration
+        links:
+            - crisesweb-cassandra
+        environment:
+            - CREATE_KEYSPACE_SCRIPT=create-keyspace.cql

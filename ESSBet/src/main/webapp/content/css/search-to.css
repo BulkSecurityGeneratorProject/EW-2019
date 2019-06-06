@@ -1,0 +1,12 @@
+.to-filters {
+    margin-top: -3px;
+    font-size: 11px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+}
+
+.to-filters-number {
+    position: relative;
+    top: -1px;
+}

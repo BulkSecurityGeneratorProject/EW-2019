@@ -1,0 +1,78 @@
+.norm-list-style {
+    list-style-type: none;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+}
+
+.norm-list-style li {
+    margin: 0px 0px 0px 0px!important;
+}
+
+.norm-list-item {
+    padding-top: 50px;
+}
+
+.norm-panel {
+    background-color: transparent!important;
+}
+
+.norm-panel-title {
+    background-color: rgb(120, 190, 32);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(120, 190, 32);
+    color: #FFF !important;
+    line-height: 20px !important;
+    padding: 5px;
+    width: 100%;
+}
+
+.norm-bs-example {
+    background: transparent!important;
+    padding: 0px;
+}
+
+.norm-table {
+    height: 100px;
+    margin: 0px;
+    background-color: transparent;
+}
+
+.norm-padding-right {
+    padding-right: 35px;
+}
+
+.norm-padding-left {
+    padding-left: 35px;
+}
+
+.norm-panel-margin {
+    margin-bottom: 20px;
+}
+
+.norm-height {
+    height: 250px;
+}
+
+.norm-height-content {
+    height: 145px;
+    width: 850px;
+}
+
+.norm-height-edit {
+    height: 185px;
+}
+
+.norm-bs-example {
+    background: #f2f2f2;
+    padding: 15px!important;
+}
+
+.clear-button {
+    color: #d9534f;
+}
+
+.norm-font-small {
+    font-size: 11px;
+    color: #777;
+}
