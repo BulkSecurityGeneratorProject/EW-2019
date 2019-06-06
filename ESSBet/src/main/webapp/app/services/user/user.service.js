@@ -1,27 +1,60 @@
 (function () {
     'use strict';
 
-    angular
-        .module('essBettingHouse')
-        .factory('User', User);
+    angular.
+        module('essBettingHouse').
+        factory('UserService', UserService);
 
-    User.$inject = ['$resource'];
+    UserService.$inject = ['$resource', '$http', '$q'];
 
-    function User ($resource) {
-        var service = $resource('api/users/:login', {}, {
-            'query': {method: 'GET', isArray: true},
-            'get': {
-                method: 'GET',
-                transformResponse: function (data) {
-                    data = angular.fromJson(data);
-                    return data;
-                }
-            },
-            'save': { method:'POST' },
-            'update': { method:'PUT' },
-            'delete':{ method:'DELETE'}
-        });
+    function UserService($resource, $http, $q) {
+        var userRegisted = [];
+
+
+        var service = {
+            registUser: registUser,
+            getUser: getUser,
+            setUser: setUser,
+            existUser: existUser
+        };
 
         return service;
+
+
+
+        function registUser(nome, password, email, plafond) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8082/api/utilizador/registo/' + nome + '/' + password + '/' +
+                email + '/' + plafond)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function setUser(user) {
+            userRegisted = user;
+        };
+
+        function getUser() {
+            return userRegisted;
+        };
+
+        function existUser(email, password) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8082/api/utilizador/existe/' + email + '/' + password)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
     }
+
+
 })();

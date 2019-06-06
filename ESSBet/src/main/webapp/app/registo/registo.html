@@ -10,13 +10,14 @@
               <div class="form-group">
                 <h2>Register:</h2>
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ng-model="emailUser">
                 <label for="exampleInputName">Name</label>
-                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name" ng-model="nomeUser">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="passwordUser">
                 <br>
-                <button type="submit" class="btn btn-primary" ng-click="function1()">Submit</button>
+                {{emailExistsError}}
+                <button type="submit" class="btn btn-primary" ng-click="regist(emailUser,nomeUser,passwordUser)">Submit</button>
                 <button type="submit" class="btn btn-primary" ng-click="function2()">Go back</button>
             </div>
             </div>
