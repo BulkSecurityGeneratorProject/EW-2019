@@ -8,7 +8,7 @@
     stateConfig.$inject = ['$stateProvider'];
 
     function stateConfig($stateProvider) {
-        $stateProvider.state('addcoin', {
+        $stateProvider.state('aposta', {
             parent: 'app',
             url: '/',
             data: {
@@ -16,14 +16,14 @@
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/addcoin/addcoin.html',
-                    controller: 'AddcoinController',
+                    templateUrl: 'app/aposta/aposta.html',
+                    controller: 'ApostaController',
                     controllerAs: 'vm'
                 }
             },
             resolve: {
                 mainTranslatePartialLoader: ['$translate', '$translatePartialLoader', function($translate, $translatePartialLoader) {
-                    $translatePartialLoader.addPart('addcoin');
+                    $translatePartialLoader.addPart('main');
                     return $translate.refresh();
                 }]
             }

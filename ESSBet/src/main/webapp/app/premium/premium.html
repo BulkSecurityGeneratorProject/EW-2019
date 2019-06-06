@@ -43,14 +43,18 @@
                     <h5> Just 100€ if you Subscribe now!!!! </h5>
                     <br>
                     <div class=" col-sm-4">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="checkPremium">
                         <label class="form-check-label" for="exampleCheck1">Subscrive</label>
                     </div>
                     <br>
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="passwordPremium">
+                    {{erroPremium}}
+                    {{erroPlafond}}
+                    {{erroCheckBox}}
+                    {{erroPassword}}
                     <br>
-                    <button type="button" class="btn btn-primary" ng-click="function1()">Pay to subscrive</button>
+                    <button type="button" class="btn btn-primary" ng-click="subscrivePremium(checkPremium,passwordPremium)">Pay to subscrive</button>
                 </div>
             </div>
             <div class="col-sm-1">

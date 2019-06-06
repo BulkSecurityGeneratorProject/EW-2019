@@ -15,7 +15,8 @@
             registUser: registUser,
             getUser: getUser,
             setUser: setUser,
-            existUser: existUser
+            existUser: existUser,
+            subscreverPremium : subscreverPremium
         };
 
         return service;
@@ -47,6 +48,18 @@
             var temp = {};
             var result = $q.defer();
             $http.get('http://localhost:8082/api/utilizador/existe/' + email + '/' + password)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function subscreverPremium(idUser) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8082/api/utilizador/premium/' + idUser)
                 .success(function (data) {
 
                     temp = data;
