@@ -12,9 +12,9 @@
 
         var userInfo = JSON.parse(localStorage.getItem("userInfo"));
         console.log(userInfo);
-        //console.log(localStorage.getItem("userAdmin"));
-        //console.log(localStorage.getItem("userPremium"));
-        //console.log(localStorage.getItem("userNormal"));
+        console.log(localStorage.getItem("userAdmin"));
+        console.log(localStorage.getItem("userPremium"));
+        console.log(localStorage.getItem("userNormal"));
 
         $scope.erroCheckBox = "";
         $scope.erroPassword = "";
@@ -50,6 +50,8 @@
                 var resUserState = dataUser.$$state.value;
                 dataUser.then(function (resUserState) {
                     console.log(resUserState);
+                    localStorage.setItem("userInfo", JSON.stringify(resUserState));
+                    localStorage.setItem("userPremium", true);
                 });
                 alert("You subscrived to premium!");
                 $state.go('main');

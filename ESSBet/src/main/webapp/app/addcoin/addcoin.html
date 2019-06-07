@@ -43,12 +43,14 @@
                     <h5> Big wins!!!! </h5>
                     <br>
                     <label for="exampleInputMoney">Add money amount</label>
-                    <input type="int" class="form-control" id="exampleInputMoney" placeholder="Money">
+                    <input type="number" class="form-control" id="exampleInputMoney" placeholder="Money" ng-model="moneyUser">
                     <br>
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="passwordUser">
+                    {{erroMoney}}
+                    {{erroPassword}}
                     <br>
-                    <button type="button" class="btn btn-primary" ng-click="function1()">Pay to subscrive</button>
+                    <button type="button" class="btn btn-primary" ng-click="addMoney(moneyUser, passwordUser)">Add money</button>
                 </div>
             </div>
             <div class="col-sm-1">

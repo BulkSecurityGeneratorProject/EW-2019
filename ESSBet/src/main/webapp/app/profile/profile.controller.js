@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -10,25 +10,39 @@
     function ProfileController($scope, Principal, $state, $rootScope) {
         var vm = this;
 
-        $scope.function1 = function() {
+        $scope.userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        $scope.userGroup = "";
+        if (localStorage.getItem("userAdmin") === "true") {
+            $scope.userGroup = "Admin";
+        } else {
+            if (localStorage.getItem("userPremium") === "true")
+                $scope.userGroup = "Premium";
+            else
+                $scope.userGroup = "Normal";
+        }
+
+
+
+
+        $scope.function1 = function () {
             $state.go('main');
         }
 
 
-        $scope.profile = function() {
+        $scope.profile = function () {
             $state.go('profile');
         }
 
 
-        $scope.logout = function() {
+        $scope.logout = function () {
             $state.go('home');
         }
 
-        $scope.premium = function() {
+        $scope.premium = function () {
             $state.go('premium');
         }
 
-        $scope.addcoin = function() {
+        $scope.addcoin = function () {
             $state.go('addcoin');
         }
 

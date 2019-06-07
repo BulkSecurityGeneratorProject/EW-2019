@@ -3,32 +3,30 @@
 
     angular.
         module('essBettingHouse').
-        factory('UserService', UserService);
+        factory('EventsService', EventsService);
 
-    UserService.$inject = ['$resource', '$http', '$q'];
+        EventsService.$inject = ['$resource', '$http', '$q'];
 
-    function UserService($resource, $http, $q) {
+    function EventsService($resource, $http, $q) {
         var userRegisted = [];
 
 
         var service = {
-            registUser: registUser,
-            getUser: getUser,
-            setUser: setUser,
-            existUser: existUser,
-            subscreverPremium : subscreverPremium,
-            updateMoney : updateMoney
+            allEvents : allEvents,
+            openEvents:  openEvents,
+            privateEvents: privateEvents,
+            publicEvents: publicEvents
+        
         };
 
         return service;
 
 
 
-        function registUser(nome, password, email, plafond) {
+        function allEvents() {
             var temp = {};
             var result = $q.defer();
-            $http.get('http://localhost:8082/api/utilizador/registo/' + nome + '/' + password + '/' +
-                email + '/' + plafond)
+            $http.get('http://localhost:8081/api/eventos')
                 .success(function (data) {
 
                     temp = data;
@@ -37,18 +35,10 @@
             return result.promise;
         };
 
-        function setUser(user) {
-            userRegisted = user;
-        };
-
-        function getUser() {
-            return userRegisted;
-        };
-
-        function existUser(email, password) {
+        function openEvents() {
             var temp = {};
             var result = $q.defer();
-            $http.get('http://localhost:8082/api/utilizador/existe/' + email + '/' + password)
+            $http.get('http://localhost:8081/api/eventos/abertos')
                 .success(function (data) {
 
                     temp = data;
@@ -57,10 +47,11 @@
             return result.promise;
         };
 
-        function subscreverPremium(idUser) {
+        
+        function privateEvents() {
             var temp = {};
             var result = $q.defer();
-            $http.get('http://localhost:8082/api/utilizador/premium/' + idUser)
+            $http.get('http://localhost:8081/api/eventos/privados')
                 .success(function (data) {
 
                     temp = data;
@@ -69,10 +60,11 @@
             return result.promise;
         };
 
-        function updateMoney(email, money) {
+    
+        function publicEvents() {
             var temp = {};
             var result = $q.defer();
-            $http.get('http://localhost:8082/api/utilizador/mudaPlafond/' + email + '/' + money)
+            $http.get('http://localhost:8081/api/eventos/publicos')
                 .success(function (data) {
 
                     temp = data;
@@ -80,6 +72,8 @@
                 });
             return result.promise;
         };
+
+        
     }
 
 

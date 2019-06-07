@@ -41,14 +41,24 @@
             <div class="col-sm-2">
             </div>
             <div class="col-sm-8">
-                <div class="ai">
-                    <div class="form-group">
+                <div class="ai" ng-show="(seePrivateEvents)">
+                    <div class="form-group" >
                         <br>
                         <label for="exampleInputName">   Game : Team 1 vs Team 2 ------ Odd 1 | Odd2 | Odd Empate ------ Hora incio </label>
                         <button type="button" class="btn btn-primary" ng-click="bet()">Bet</button>
                     </div>
                 </div>
+
+                <div class="ai" ng-show="!(seePrivateEvents)">
+                    <div class="form-group" >
+                        <br>
+                        <label for="exampleInputName">   Game : Team 1 vs Team 2 ------ Odd 1 | Odd2 | Odd Empate ------ Hora incio </label>
+                        <button type="button" class="btn btn-primary" ng-click="bet()">Bet</button>
+                    </div>
+                </div>
+               
             </div>
+           
             <div class="col-sm-2">
             </div>
         </div>

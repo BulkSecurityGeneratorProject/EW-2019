@@ -34,22 +34,22 @@
                 <div class="form-group">
                     <br>
                     <br>
-                    <h3> Username Profile </h3>
+                    <h3> User Profile </h3>
                     <br>
                     <label for="exampleInputName">Name:</label>
-                    <input type="int" class="form-control" id="exampleInputName" placeholder="User Name"  disabled>
+                    <input type="int" class="form-control" id="exampleInputName" placeholder="{{userInfo.username}}"  disabled>
                     <br>
                     <label for="exampleInputPassword1">Password:</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" disabled>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="{{userInfo.password}}" disabled>
                     <br>
                     <label for="exampleInputEmail">Email:</label>
-                    <input type="text" class="form-control" id="exampleInputEmail" placeholder="User Email" disabled>
+                    <input type="text" class="form-control" id="exampleInputEmail" placeholder="{{userInfo.email}}" disabled>
                     <br>
                     <label for="exampleInputGroup">Group:</label>
-                    <input type="text" class="form-control" id="exampleInputGroup" placeholder="User Group" disabled>
+                    <input type="text" class="form-control" id="exampleInputGroup" placeholder="{{userGroup}}" disabled>
                     <br>
                     <label for="exampleInputMoney">Money:</label>
-                    <input type="text" class="form-control" id="exampleInputMoney" placeholder="User Money" disabled>
+                    <input type="text" class="form-control" id="exampleInputMoney" placeholder="{{userInfo.plafond}}" disabled>
                     <br>
                     <button type="button" class="btn btn-primary" ng-click="addcoin()">Add more money to your account</button>
                 </div>
