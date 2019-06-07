@@ -23,7 +23,7 @@
             },
             resolve: {
                 mainTranslatePartialLoader: ['$translate', '$translatePartialLoader', function($translate, $translatePartialLoader) {
-                    $translatePartialLoader.addPart('registo');
+                    $translatePartialLoader.addPart('main');
                     return $translate.refresh();
                 }]
             }

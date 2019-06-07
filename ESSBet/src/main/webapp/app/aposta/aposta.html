@@ -18,9 +18,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href ng-click="addcoin()">Add Money </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href ng-click="logout()">Logout </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin Area
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href ng-click="users()">Manage Users </a>
+                    <a class="dropdown-item" href ng-click="events()">Manage Events </a>
+                    <a class="dropdown-item" href ng-click="bets()">Manage Bets </a>
+
+                    </div>
                 </li>
+                <li class="nav-item">
+                    <a  class="nav-link" href ng-click="logout()">Logout </a>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -36,30 +48,32 @@
                 <div class="form-group" style="text-align:center;">
                     <br>
                     <br>
-                    <h5 > Team 1 vs Team2 </h5>
+                    <h5> {{participantsNome}} </h5>
                     <br>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-3">
                             </div>
-                            <div class="col-sm-6">
+                            <!--<div class="col-sm-6">
+                                <div class="form-inline" style="text-align:center;" ng-repeat="x in participantsInfo track by $index">
+                                    <label class="form-check-label" for="exampleCheck1">Odd {{participantsInfo[$index].odd_vencer}} for victory of {{participantsInfo[$index].nome}}:
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" value="participantsInfo[$index].id"
+                                            ng-model="checkParticipante">
+                                    </label>
+                                </div>
                                 <div class="form-inline" style="text-align:center;">
-                                    <label class="form-check-label" for="exampleCheck1">Odd for victory of Team 1:    <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="checkOddTeam1">
+                                    <label class="form-check-label" for="exampleCheck3">Odd {{apostaOddEmpate}} for draw:
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck3" value=""
+                                            ng-model="checkParticipante">
                                     </label>
                                 </div>
                                 <br>
-                                <div class="form-inline" >
-                                    <label class="form-check-label" for="exampleCheck2">Odd for victory of Team 2:
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" ng-model="checkOddTeam2">
-                                    </label>
-                                </div>
-                                <br>
-                                <div class="form-inline" style="text-align:center;">
-                                <label class="form-check-label" for="exampleCheck3">Odd for draw:
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck3" ng-model="checkOddTeam3">
-                                </label>
-                                </div>
-                                <br>
+                            </div>-->
+                            <div>
+                                <select ng-model="checkParticipante">
+                                    <option value="">Odd {{apostaOddEmpate}} for draw</option>
+                                    <option ng-repeat="x in participantsInfo track by $index" value="{{participantsInfo[$index].id}}">Odd {{participantsInfo[$index].odd_vencer}} for victory of {{participantsInfo[$index].nome}}</option>
+                                </select>
                             </div>
                             <div class="col-sm-3">
                             </div>
@@ -67,9 +81,13 @@
                     </div>
                     <br>
                     <label for="exampleInputPassword1">Amount</label>
-                    <input type="float" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount"
+                        ng-model="amount">
+                        {{erroAmount}}
+                        {{erroPlafond}}
                     <br>
-                    <button type="button" class="btn btn-primary" ng-click="fun()">Place your bet</button>
+                    <button type="button" class="btn btn-primary"
+                        ng-click="betParticipant(checkParticipante,amount)">Place your bet</button>
                 </div>
             </div>
             <div class="col-sm-1">

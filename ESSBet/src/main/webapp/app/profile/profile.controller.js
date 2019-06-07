@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     angular
@@ -24,27 +24,38 @@
 
 
 
-        $scope.function1 = function () {
+        $scope.function1 = function() {
             $state.go('main');
         }
 
 
-        $scope.profile = function () {
+        $scope.profile = function() {
             $state.go('profile');
         }
 
 
-        $scope.logout = function () {
+        $scope.logout = function() {
             $state.go('home');
         }
 
-        $scope.premium = function () {
+        $scope.premium = function() {
             $state.go('premium');
         }
 
-        $scope.addcoin = function () {
+        $scope.addcoin = function() {
             $state.go('addcoin');
         }
 
+        $scope.users = function() {
+            $state.go('adminuser');
+        }
+
+        $scope.events = function() {
+            $state.go('adminevent');
+        }
+
+        $scope.bets = function() {
+            $state.go('adminbet');
+        }
     }
 })();

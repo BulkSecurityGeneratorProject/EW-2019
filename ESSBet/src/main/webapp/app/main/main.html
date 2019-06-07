@@ -18,9 +18,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href ng-click="addcoin()">Add Money </a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin Area
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href ng-click="users()">Manage Users </a>
+                    <a class="dropdown-item" href ng-click="events()">Manage Events </a>
+                    <a class="dropdown-item" href ng-click="bets()">Manage Bets </a>
+
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a  class="nav-link" href ng-click="logout()">Logout </a>
                 </li>
+
             </ul>
         </div>
     </nav>
@@ -41,28 +53,32 @@
             <div class="col-sm-2">
             </div>
             <div class="col-sm-8">
-                <div class="ai" ng-show="(seePrivateEvents)">
-                    <div class="form-group" >
+
+                <div class="ai" ng-show="(seePrivateEvents)" ng-repeat="x in allOpenEvents track by $index">
+                    <div class="form-group">
                         <br>
-                        <label for="exampleInputName">   Game : Team 1 vs Team 2 ------ Odd 1 | Odd2 | Odd Empate ------ Hora incio </label>
-                        <button type="button" class="btn btn-primary" ng-click="bet()">Bet</button>
+                        <label for="exampleInputName"> IDENT: {{allOpenEvents[$index].id}}  START: {{allOpenEvents[$index].horaInicio}} END: {{allOpenEvents[$index].horaFim}}
+                           SPORT: {{allOpenEvents[$index].desporto}} PUBLIC: {{allOpenEvents[$index].publico}} ODD_TIE: {{allOpenEvents[$index].odd_empate}} Nº PART: {{allOpenEvents[$index].n_participante}} </label>
+                        <button type="button" class="btn btn-primary" ng-click="bet(allOpenEvents[$index].id,allOpenEvents[$index].odd_empate)">Bet</button>
                     </div>
                 </div>
 
-                <div class="ai" ng-show="!(seePrivateEvents)">
-                    <div class="form-group" >
+
+                <div class="ai" ng-show="!(seePrivateEvents)" ng-repeat="x in publicEvents track by $index">
+                    <div class="form-group">
                         <br>
-                        <label for="exampleInputName">   Game : Team 1 vs Team 2 ------ Odd 1 | Odd2 | Odd Empate ------ Hora incio </label>
-                        <button type="button" class="btn btn-primary" ng-click="bet()">Bet</button>
+                        <label for="exampleInputName"> IDENT: {{publicEvents[$index].id}}  START: {{publicEvents[$index].horaInicio}} END: {{publicEvents[$index].horaFim}}
+                                SPORT: {{publicEvents[$index].desporto}} PUBLIC: {{publicEvents[$index].publico}} ODD_TIE: {{publicEvents[$index].odd_empate}} Nº PART: {{publicEvents[$index].n_participante}} </label>
+                        <button type="button" class="btn btn-primary" ng-click="bet(publicEvents[$index].id, publicEvents[$index].odd_empate)">Bet</button>
                     </div>
+
                 </div>
-               
+
             </div>
-           
+
+
             <div class="col-sm-2">
             </div>
         </div>
     </div>
 </div>
-
-

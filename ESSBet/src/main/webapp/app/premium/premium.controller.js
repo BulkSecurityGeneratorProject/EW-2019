@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     angular
@@ -22,7 +22,7 @@
         $scope.erroPremium = "";
 
 
-        $scope.subscrivePremium = function (checkBox, password) {
+        $scope.subscrivePremium = function(checkBox, password) {
             //Erros
             if (localStorage.getItem("userPremium") === "true")
                 $scope.erroPremium = "You already subscribed to premium!";
@@ -43,12 +43,12 @@
 
 
             //Subscrever
-            if (password === userInfo.password && checkBox === true
-                && userInfo.plafond >= 100 && localStorage.getItem("userPremium") != true) {
-                    console.log("Subscreveu!");
+            if (password === userInfo.password && checkBox === true &&
+                userInfo.plafond >= 100 && localStorage.getItem("userPremium") != true) {
+                console.log("Subscreveu!");
                 var dataUser = UserService.subscreverPremium(userInfo.id);
                 var resUserState = dataUser.$$state.value;
-                dataUser.then(function (resUserState) {
+                dataUser.then(function(resUserState) {
                     console.log(resUserState);
                     localStorage.setItem("userInfo", JSON.stringify(resUserState));
                     localStorage.setItem("userPremium", true);
@@ -58,28 +58,38 @@
             }
 
 
-            
+
         }
 
 
-        $scope.profile = function () {
+        $scope.profile = function() {
             $state.go('profile');
         }
 
 
-        $scope.logout = function () {
+        $scope.logout = function() {
             $state.go('home');
         }
 
-        $scope.premium = function () {
+        $scope.premium = function() {
             $state.go('premium');
         }
 
-        $scope.addcoin = function () {
+        $scope.addcoin = function() {
             $state.go('addcoin');
         }
 
+        $scope.users = function() {
+            $state.go('adminuser');
+        }
 
+        $scope.events = function() {
+            $state.go('adminevent');
+        }
+
+        $scope.bets = function() {
+            $state.go('adminbet');
+        }
     }
 
 })();

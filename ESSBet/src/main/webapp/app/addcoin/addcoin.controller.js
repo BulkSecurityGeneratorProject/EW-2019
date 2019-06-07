@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     angular
@@ -15,7 +15,7 @@
         $scope.erroMoney = "";
 
 
-        $scope.addMoney = function (money, password) {
+        $scope.addMoney = function(money, password) {
             console.log(money);
 
             if (money === undefined || money === null)
@@ -30,7 +30,7 @@
             if (password === userInfo.password && money != undefined && money != null) {
                 var dataUser = UserService.updateMoney(userInfo.email, (userInfo.plafond + money));
                 var resUserState = dataUser.$$state.value;
-                dataUser.then(function (resUserState) {
+                dataUser.then(function(resUserState) {
                     console.log(resUserState);
                     localStorage.setItem("userInfo", JSON.stringify(resUserState));
                 });
@@ -40,21 +40,33 @@
         }
 
 
-        $scope.profile = function () {
+        $scope.profile = function() {
             $state.go('profile');
         }
 
 
-        $scope.logout = function () {
+        $scope.logout = function() {
             $state.go('home');
         }
 
-        $scope.premium = function () {
+        $scope.premium = function() {
             $state.go('premium');
         }
 
-        $scope.addcoin = function () {
+        $scope.addcoin = function() {
             $state.go('addcoin');
+        }
+
+        $scope.users = function() {
+            $state.go('adminuser');
+        }
+
+        $scope.events = function() {
+            $state.go('adminevent');
+        }
+
+        $scope.bets = function() {
+            $state.go('adminbet');
         }
 
 
