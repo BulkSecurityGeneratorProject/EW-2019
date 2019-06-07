@@ -19,7 +19,7 @@
                     <a class="nav-link" href ng-click="addcoin()">Add Money </a>
                 </li>
                 <li class="nav-item">
-                    <a align="right" class="nav-link" href ng-click="logout()">Logout </a>
+                    <a class="nav-link" href ng-click="logout()">Logout </a>
                 </li>
             </ul>
         </div>
@@ -33,19 +33,43 @@
             <div class="col-sm-1">
             </div>
             <div class="col-sm-6">
-                <div class="form-group">
+                <div class="form-group" style="text-align:center;">
                     <br>
                     <br>
-                    <h3> Add more money to your account and start winning </h3>
-                    <h5> Big wins!!!! </h5>
+                    <h5 > Team 1 vs Team2 </h5>
                     <br>
-                    <label for="exampleInputMoney">Add money amount</label>
-                    <input type="int" class="form-control" id="exampleInputMoney" placeholder="Money">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-inline" style="text-align:center;">
+                                    <label class="form-check-label" for="exampleCheck1">Odd for victory of Team 1:    <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="checkOddTeam1">
+                                    </label>
+                                </div>
+                                <br>
+                                <div class="form-inline" >
+                                    <label class="form-check-label" for="exampleCheck2">Odd for victory of Team 2:
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" ng-model="checkOddTeam2">
+                                    </label>
+                                </div>
+                                <br>
+                                <div class="form-inline" style="text-align:center;">
+                                <label class="form-check-label" for="exampleCheck3">Odd for draw:
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck3" ng-model="checkOddTeam3">
+                                </label>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-sm-3">
+                            </div>
+                        </div>
+                    </div>
                     <br>
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Amount</label>
+                    <input type="float" class="form-control" id="exampleInputAmount" placeholder="Amount">
                     <br>
-                    <button type="button" class="btn btn-primary" ng-click="function1()">Pay to subscrive</button>
+                    <button type="button" class="btn btn-primary" ng-click="fun()">Place your bet</button>
                 </div>
             </div>
             <div class="col-sm-1">
@@ -55,4 +79,3 @@
         </div>
     </div>
 </div>
-<br>
