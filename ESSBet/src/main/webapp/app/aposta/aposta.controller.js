@@ -89,7 +89,7 @@
 
         }
 
-        $scope.function1 = function() {
+        $scope.main = function() {
             $state.go('main');
         }
 

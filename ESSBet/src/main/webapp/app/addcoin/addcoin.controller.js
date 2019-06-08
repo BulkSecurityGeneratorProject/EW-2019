@@ -39,6 +39,10 @@
             }
         }
 
+        $scope.main = function() {
+            $state.go('main');
+        }
+
 
         $scope.profile = function() {
             $state.go('profile');
