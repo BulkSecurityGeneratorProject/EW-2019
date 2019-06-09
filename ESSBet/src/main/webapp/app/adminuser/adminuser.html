@@ -43,45 +43,42 @@
 <div class="col-sm-12">
     <div class="container">
         <div class="row">
-            <div class="col-sm-2">
-
-            </div>
             <div class="col-sm-1">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-10">
                 <div class="form-group">
-
-                    <table>
-                        <tr>
-                            <td>ID</td>
-                            <td>Username</td>
-                            <td>Password</td>
-                            <td>Email</td>
-                            <td>Plafond</td>
-                            <td>Group</td>
-                            
-                        </tr>
-
-                        <tr ng-repeat="x in usersInfo track by $index">
-                            <td>{{usersInfo[$index].id}}</td>
-                            <td>{{usersInfo[$index].username}}</td>
-                            <td>{{usersInfo[$index].password}}</td>
-                            <td>{{usersInfo[$index].email}}</td>
-                            <td>{{usersInfo[$index].plafond}}</td>
-                            <td>{{usersInfo[$index].grupos[0].groupname}}</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" ng-click="removeUser(usersInfo[$index].id)">Remove</button>
-                            </td>
-
-                        </tr>
+                <br>
+                <h5>All registed users in the App</h5>
+                <br>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Plafond</th>
+                                <th scope="col">Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in usersInfo track by $index">
+                                <td>{{usersInfo[$index].id}}</td>
+                                <td>{{usersInfo[$index].username}}</td>
+                                <td>{{usersInfo[$index].password}}</td>
+                                <td>{{usersInfo[$index].email}}</td>
+                                <td>{{usersInfo[$index].plafond}}</td>
+                                <td>{{usersInfo[$index].grupos[0].groupname}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" ng-click="removeUser(usersInfo[$index].id)">Remove</button>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
                 </div>
             </div>
             <div class="col-sm-1">
-            </div>
-            <div class="col-sm-2">
-
             </div>
         </div>
     </div>

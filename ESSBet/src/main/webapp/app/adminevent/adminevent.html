@@ -42,105 +42,102 @@
 <div class="col-sm-12">
     <div class="container">
         <div class="row">
-            <div class="col-sm-2">
 
-            </div>
             <div class="col-sm-1">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-10">
                 <div class="form-group">
-                    <h5>Open Events</h5>
-                    <table>
-                        <tr>
-                            <td>ID</td>
-                            <td>Begin</td>
-                            <td>End</td>
-                            <td>State</td>
-                            <td>Sport</td>
-                            <td>Time Event?</td>
-                            <td>Tie Odd</td>
-                            <td>Public Event?</td>
-                            <td>Number of participants</td>
-                            <td>Participantes</td>
-
-                        </tr>
-
-                        <tr ng-repeat="x in eventsOpenInfo track by $index">
-                            <td>{{eventsOpenInfo[$index].id}}</td>
-                            <td>{{eventsOpenInfo[$index].horaInicio}}</td>
-                            <td>{{eventsOpenInfo[$index].horaFim}}</td>
-                            <td>{{eventsOpenInfo[$index].estado}}</td>
-                            <td>{{eventsOpenInfo[$index].desporto}}</td>
-                            <td>{{eventsOpenInfo[$index].evento_equipa}}</td>
-                            <td>{{eventsOpenInfo[$index].odd_empate}}</td>
-                            <td>{{eventsOpenInfo[$index].publico}}</td>
-                            <td>{{eventsOpenInfo[$index].n_participante}}</td>
-                            <td>
-                                <select>
-                                    <option>Participants</option>
-                                    <option ng-repeat="z in eventsOpenPart[$index]">Name:{{z.nome}} Odd:{{z.odd_vencer}}
-                                    </option>
-                                </select>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-primary" ng-click="">Edit</button>
-                            </td>
-
-                        </tr>
+                    <br>
+                    <h5>Active Events</h5>
+                    <br>
+                    <table class="table table-striped">
+                         <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Begin</th>
+                                <th scope="col">End</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Sport</th>
+                                <th scope="col">Time Event?</th>
+                                <th scope="col">Tie Odd</th>
+                                <th scope="col">Public Event?</th>
+                                <th scope="col">Number of participants</th>
+                                <th scope="col">Participantes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in eventsOpenInfo track by $index">
+                                <td>{{eventsOpenInfo[$index].id}}</td>
+                                <td>{{eventsOpenInfo[$index].horaInicio}}</td>
+                                <td>{{eventsOpenInfo[$index].horaFim}}</td>
+                                <td>{{eventsOpenInfo[$index].estado}}</td>
+                                <td>{{eventsOpenInfo[$index].desporto}}</td>
+                                <td>{{eventsOpenInfo[$index].evento_equipa}}</td>
+                                <td>{{eventsOpenInfo[$index].odd_empate}}</td>
+                                <td>{{eventsOpenInfo[$index].publico}}</td>
+                                <td>{{eventsOpenInfo[$index].n_participante}}</td>
+                                <td>
+                                    <select>
+                                        <option>Participants</option>
+                                        <option ng-repeat="z in eventsOpenPart[$index]">Name:{{z.nome}} Odd:{{z.odd_vencer}}
+                                        </option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" ng-click="">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div class="form-group">
+                    <br>
                     <h5>Closed Events</h5>
-                    <table>
-                        <tr>
-                            <td>ID</td>
-                            <td>Begin</td>
-                            <td>End</td>
-                            <td>State</td>
-                            <td>Sport</td>
-                            <td>Team Event?</td>
-                            <td>Tie Odd</td>
-                            <td>Public Event?</td>
-                            <td>Number of participants</td>
-                            <td>Participantes</td>
-                            <td>Winner</td>
-
-                        </tr>
-
-                        <tr ng-repeat="z in eventsClosedInfo track by $index">
-                            <td>{{eventsClosedInfo[$index].id}}</td>
-                            <td>{{eventsClosedInfo[$index].horaInicio}}</td>
-                            <td>{{eventsClosedInfo[$index].horaFim}}</td>
-                            <td>{{eventsClosedInfo[$index].estado}}</td>
-                            <td>{{eventsClosedInfo[$index].desporto}}</td>
-                            <td>{{eventsClosedInfo[$index].evento_equipa}}</td>
-                            <td>{{eventsClosedInfo[$index].odd_empate}}</td>
-                            <td>{{eventsClosedInfo[$index].publico}}</td>
-                            <td>{{eventsClosedInfo[$index].n_participante}}</td>
-                            <td>
-                                <select>
-                                    <option>Participants</option>
-                                    <option ng-repeat="z in eventsClosedPart[$index]">Name:{{z.nome}}
-                                        Odd:{{z.odd_vencer}}</option>
-                                </select>
-                            </td>
-                            <td>
-                            <td>{{eventsClosedInfo[$index].vencedor}}</td>
-
-
-                        </tr>
+                    <br>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Begin</th>
+                                <th scope="col">End</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Sport</th>
+                                <th scope="col">Team Event?</th>
+                                <th scope="col">Tie Odd</th>
+                                <th scope="col">Public Event?</th>
+                                <th scope="col">Number of participants</th>
+                                <th scope="col">Participantes</th>
+                                <th scope="col">Winner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="z in eventsClosedInfo track by $index">
+                                <td>{{eventsClosedInfo[$index].id}}</td>
+                                <td>{{eventsClosedInfo[$index].horaInicio}}</td>
+                                <td>{{eventsClosedInfo[$index].horaFim}}</td>
+                                <td>{{eventsClosedInfo[$index].estado}}</td>
+                                <td>{{eventsClosedInfo[$index].desporto}}</td>
+                                <td>{{eventsClosedInfo[$index].evento_equipa}}</td>
+                                <td>{{eventsClosedInfo[$index].odd_empate}}</td>
+                                <td>{{eventsClosedInfo[$index].publico}}</td>
+                                <td>{{eventsClosedInfo[$index].n_participante}}</td>
+                                <td>
+                                    <select>
+                                        <option>Participants</option>
+                                        <option ng-repeat="z in eventsClosedPart[$index]">Name:{{z.nome}}
+                                            Odd:{{z.odd_vencer}}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <td>{{eventsClosedInfo[$index].vencedor}}</td>
+                            </tr>
+                        </tbody>
                     </table>
-
                 </div>
-
                 <button type="button" class="btn btn-primary" ng-click="">New Event</button>
                 Obrigar sempre a registar participantes para registar evento
-
             </div>
             <div class="col-sm-1">
-            </div>
-            <div class="col-sm-2">
-
             </div>
         </div>
     </div>
