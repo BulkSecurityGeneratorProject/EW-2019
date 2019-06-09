@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider.state('addcoin', {
             parent: 'app',
-            url: '/',
+            url: '/user/addcoin',
             data: {
                 authorities: []
             },

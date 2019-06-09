@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -10,6 +10,10 @@
     function MainController($scope, Principal, $state, $rootScope, EventsService, BetsService) {
         var vm = this;
 
+        $scope.ehAdmin = false;
+        if (localStorage.getItem("userAdmin") === "true")
+            $scope.ehAdmin = true;
+            
         $scope.publicEvents;
         $scope.allOpenEvents;
 
@@ -30,7 +34,7 @@
 
         var dataEventsPublic = EventsService.publicEvents();
         var resEventsPublicState = dataEventsPublic.$$state.value;
-        dataEventsPublic.then(function(resEventsPublicState) {
+        dataEventsPublic.then(function (resEventsPublicState) {
             console.log(resEventsPublicState);
 
             $scope.publicEvents = JSON.parse(JSON.stringify(resEventsPublicState));
@@ -38,7 +42,7 @@
 
         var dataEventsOpen = EventsService.openEvents();
         var resEventsOpenState = dataEventsOpen.$$state.value;
-        dataEventsOpen.then(function(resEventsOpenState) {
+        dataEventsOpen.then(function (resEventsOpenState) {
             console.log(resEventsOpenState);
             console.log(resEventsOpenState[0].id);
 
@@ -46,42 +50,42 @@
         });
 
 
-        $scope.main = function() {
+        $scope.main = function () {
             $state.go('main');
         }
 
-        $scope.profile = function() {
+        $scope.profile = function () {
             $state.go('profile');
         }
 
         //vai para a pagina home para efetuar login
-        $scope.logout = function() {
+        $scope.logout = function () {
             $state.go('home');
         }
 
-        $scope.premium = function() {
+        $scope.premium = function () {
             $state.go('premium');
         }
 
-        $scope.addcoin = function() {
+        $scope.addcoin = function () {
             $state.go('addcoin');
         }
 
-        $scope.bet = function(idEvento, oddEvento) {
+        $scope.bet = function (idEvento, oddEvento) {
             BetsService.setIdEvento(idEvento);
             BetsService.setOddEvento(oddEvento);
             $state.go('aposta');
         }
 
-        $scope.users = function() {
+        $scope.users = function () {
             $state.go('adminuser');
         }
 
-        $scope.events = function() {
+        $scope.events = function () {
             $state.go('adminevent');
         }
 
-        $scope.bets = function() {
+        $scope.bets = function () {
             $state.go('adminbet');
         }
 

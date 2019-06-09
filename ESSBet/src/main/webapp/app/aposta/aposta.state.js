@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider.state('aposta', {
             parent: 'app',
-            url: '/',
+            url: '/bet',
             data: {
                 authorities: []
             },

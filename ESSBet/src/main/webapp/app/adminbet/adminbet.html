@@ -1,4 +1,4 @@
- <div  class="col-sm-12">
+ <div  class="col-sm-12" ng-show="(ehAdmin)">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +47,101 @@
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    listagem de todos as bets efetuados pelos users
+                    <h5>Open Bets</h5>
+                    <table>
+                        <tr>
+                            <td>Bet ID</td>
+                            <td>Bet State</td>
+                            <td>Money betted</td>
+                            <td>User ID</td>
+                            <td>User name</td>
+                            <td>User email</td>
+                            <td>Event ID</td>
+                            <td>Event Begin</td>
+                            <td>Event End</td>
+                            <td>Event State</td>
+                            <td>Event Sport</td>
+                            <td>Event Tie Odd</td>
+                            <td>Public Event?</td>
+                            <td>Participant Bet</td>
+                            <td>Odd Bet</td>
+                            <td>Event other participantes</td>
+                        </tr>
+                        <tr ng-repeat="z in betsOpenInfo track by $index">
+                                <td>{{betsOpenInfo[$index].id}}</td>
+                                <td>{{betsOpenInfo[$index].estado}}</td>
+                                <td>{{betsOpenInfo[$index].montante}}</td>
+                                <td>{{betsOpenInfo[$index].utilizador_id}}</td>
+                                <td>{{betsOpenInfo[$index].utilizador_nome}}</td>
+                                <td>{{betsOpenInfo[$index].utilizador_email}}</td>
+                                <td>{{betsOpenInfo[$index].evento_id}}</td>
+                                <td>{{betsOpenInfo[$index].evento_Inicio}}</td>
+                                <td>{{betsOpenInfo[$index].evento_Fim}}</td>
+                                <td>{{betsOpenInfo[$index].evento_estado}}</td>
+                                <td>{{betsOpenInfo[$index].evento_desporto}}</td>
+                                <td>{{betsClosedInfo[$index].evento_oddEmpate}}</td>
+                                <td>{{betsOpenInfo[$index].evento_publico}}</td>
+                                <td>{{betsOpenInfo[$index].participante_nome}}</td>
+                                <td>{{betsOpenInfo[$index].participante_odd}}</td>
+                                <td> 
+                                    <select>
+                                        <option>Participants</option>
+                                        <option ng-repeat="z in betsOpenInfo[$index].outrosParticipante">Name:{{z.nome}}
+                                            Odd:{{z.odd_vencer}}</option>
+                                    </select>
+                                </td>
+                        </tr>
+                    </table>
+                    
                 </div>
+                <div class="form-group">
+                    <h5>Closed Bets</h5>
+                    
+                    <table>
+                            <tr>
+                                <td>Bet ID</td>
+                                <td>Bet State</td>
+                                <td>Money betted</td>
+                                <td>User ID</td>
+                                <td>User name</td>
+                                <td>User email</td>
+                                <td>Event ID</td>
+                                <td>Event Begin</td>
+                                <td>Event End</td>
+                                <td>Event State</td>
+                                <td>Event Sport</td>
+                                <td>Event Tie Odd</td>
+                                <td>Public Event?</td>
+                                <td>Event other participantes</td>
+                                <td>Winner</td>
+                            </tr>
+                            <tr ng-repeat="z in betsClosedInfo track by $index">
+                                    <td>{{betsClosedInfo[$index].id}}</td>
+                                    <td>{{betsClosedInfo[$index].estado}}</td>
+                                    <td>{{betsClosedInfo[$index].montante}}</td>
+                                    <td>{{betsClosedInfo[$index].utilizador_id}}</td>
+                                    <td>{{betsClosedInfo[$index].utilizador_nome}}</td>
+                                    <td>{{betsClosedInfo[$index].utilizador_email}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_id}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_Inicio}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_Fim}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_estado}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_desporto}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_oddEmpate}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_publico}}</td>
+                                    <td>{{betsClosedInfo[$index].participante_nome}}</td>
+                                    <td>{{betsClosedInfo[$index].participante_odd}}</td>
+                                    <td> 
+                                        <select>
+                                            <option>Participants</option>
+                                            <option ng-repeat="z in betsClosedInfo[$index].outrosParticipante">Name:{{z.nome}}
+                                                Odd:{{z.odd_vencer}}</option>
+                                        </select>
+                                        td>{{betsClosedInfo[$index].evento_vencedor}}</td>
+                                    </td>
+                            </tr>
+                        </table>
+                    </div>
             </div>
             <div class="col-sm-1">
             </div>

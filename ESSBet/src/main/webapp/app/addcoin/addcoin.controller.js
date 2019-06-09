@@ -14,6 +14,11 @@
         $scope.erroPassword = "";
         $scope.erroMoney = "";
 
+        $scope.ehAdmin = false;
+
+        if (localStorage.getItem("userAdmin") === "true")
+            $scope.ehAdmin = true;
+
 
         $scope.addMoney = function(money, password) {
             console.log(money);

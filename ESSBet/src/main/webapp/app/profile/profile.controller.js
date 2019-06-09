@@ -10,6 +10,10 @@
     function ProfileController($scope, Principal, $state, $rootScope) {
         var vm = this;
 
+        $scope.ehAdmin = false;
+        if (localStorage.getItem("userAdmin") === "true")
+            $scope.ehAdmin = true;
+
         $scope.userInfo = JSON.parse(localStorage.getItem("userInfo"));
         $scope.userGroup = "";
         if (localStorage.getItem("userAdmin") === "true") {

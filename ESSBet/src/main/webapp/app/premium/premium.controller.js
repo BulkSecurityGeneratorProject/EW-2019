@@ -16,6 +16,10 @@
         console.log(localStorage.getItem("userPremium"));
         console.log(localStorage.getItem("userNormal"));
 
+        $scope.ehAdmin = false;
+        if (localStorage.getItem("userAdmin") === "true")
+            $scope.ehAdmin = true;
+
         $scope.erroCheckBox = "";
         $scope.erroPassword = "";
         $scope.erroPlafond = "";

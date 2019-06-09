@@ -18,6 +18,10 @@
         $scope.apostaOddEmpate = BetsService.getOddEvento();
         console.log($scope.apostaEventoId);
 
+        $scope.ehAdmin = false;
+        if (localStorage.getItem("userAdmin") === "true")
+            $scope.ehAdmin = true;
+
         $scope.participantsInfo;
         $scope.participantsNome = "";
 

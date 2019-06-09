@@ -19,7 +19,9 @@
             getOddEvento: getOddEvento,
             participantsEvent : participantsEvent,
             newBet : newBet,
-            newBetTie : newBetTie
+            newBetTie : newBetTie,
+            closedBets : closedBets,
+            openBets: openBets
         };
 
         return service;
@@ -69,6 +71,30 @@
             var temp = {};
             var result = $q.defer();
             $http.get('http://localhost:8083/api/apostas/novaApostaEmpate/' + idUser + '/' + idEvent + '/' + amount)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function openBets() {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8083/api/apostas/todasAbertas')
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function closedBets() {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8083/api/apostas/todasFechadas')
                 .success(function (data) {
 
                     temp = data;

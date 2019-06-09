@@ -15,7 +15,8 @@
             allEvents : allEvents,
             openEvents:  openEvents,
             privateEvents: privateEvents,
-            publicEvents: publicEvents
+            publicEvents: publicEvents,
+            closedEvents: closedEvents
         
         };
 
@@ -65,6 +66,19 @@
             var temp = {};
             var result = $q.defer();
             $http.get('http://localhost:8081/api/eventos/publicos')
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        
+        function closedEvents() {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8081/api/eventos/fechados')
                 .success(function (data) {
 
                     temp = data;

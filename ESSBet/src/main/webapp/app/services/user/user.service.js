@@ -17,7 +17,9 @@
             setUser: setUser,
             existUser: existUser,
             subscreverPremium : subscreverPremium,
-            updateMoney : updateMoney
+            updateMoney : updateMoney,
+            allUsers : allUsers,
+            deleteUser : deleteUser
         };
 
         return service;
@@ -73,6 +75,30 @@
             var temp = {};
             var result = $q.defer();
             $http.get('http://localhost:8082/api/utilizador/mudaPlafond/' + email + '/' + money)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function allUsers() {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8082/api/utilizadors')
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function deleteUser(idUser) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8082/api/utilizador/elimina/' +  idUser)
                 .success(function (data) {
 
                     temp = data;

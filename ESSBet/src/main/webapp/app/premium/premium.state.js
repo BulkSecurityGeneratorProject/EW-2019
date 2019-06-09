@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider.state('premium', {
             parent: 'app',
-            url: '/',
+            url: '/user/premium',
             data: {
                 authorities: []
             },

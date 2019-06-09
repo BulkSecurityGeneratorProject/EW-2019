@@ -10,6 +10,21 @@
     function AdminuserController($scope, Principal, $state, $rootScope, UserService) {
         var vm = this;
 
+        $scope.ehAdmin = false;
+        if (localStorage.getItem("userAdmin") === "true")
+            $scope.ehAdmin = true;
+            
+        $scope.usersInfo;
+        $scope.groupInfo = [];
+
+        var dataUsers = UserService.allUsers();
+        var resUsersState = dataUsers.$$state.value;
+        dataUsers.then(function(resUsersState) {
+            console.log(resUsersState);
+
+            $scope.usersInfo = JSON.parse(JSON.stringify(resUsersState));
+        });
+
 
         $scope.main = function() {
             $state.go('main');
@@ -43,6 +58,15 @@
 
         $scope.bets = function() {
             $state.go('adminbet');
+        }
+
+        $scope.removeUser = function(idUser) {
+            var dataUsers = UserService.deleteUser(idUser);
+            var resUsersState = dataUsers.$$state.value;
+            dataUsers.then(function(resUsersState) {
+                console.log(resUsersState);
+                $scope.usersInfo = JSON.parse(JSON.stringify(resUsersState));
+            });
         }
     }
 
