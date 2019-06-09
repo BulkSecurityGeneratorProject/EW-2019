@@ -21,7 +21,8 @@
             newBet : newBet,
             newBetTie : newBetTie,
             closedBets : closedBets,
-            openBets: openBets
+            openBets: openBets,
+            deleteBetsFromUser : deleteBetsFromUser
         };
 
         return service;
@@ -95,6 +96,18 @@
             var temp = {};
             var result = $q.defer();
             $http.get('http://localhost:8083/api/apostas/todasFechadas')
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function deleteBetsFromUser(idUser) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8083/api/apostas/apagaApostas/utilizador/' + idUser)
                 .success(function (data) {
 
                     temp = data;

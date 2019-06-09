@@ -5,9 +5,9 @@
         .module('essBettingHouse')
         .controller('AdminuserController', AdminuserController);
 
-    AdminuserController.$inject = ['$scope', 'Principal', '$state', '$rootScope', 'UserService']
+    AdminuserController.$inject = ['$scope', 'Principal', '$state', '$rootScope', 'UserService', 'BetsService']
 
-    function AdminuserController($scope, Principal, $state, $rootScope, UserService) {
+    function AdminuserController($scope, Principal, $state, $rootScope, UserService, BetsService) {
         var vm = this;
 
         $scope.ehAdmin = false;
@@ -61,12 +61,20 @@
         }
 
         $scope.removeUser = function(idUser) {
+            var dataBets = BetsService.deleteBetsFromUser(idUser);
+            var resBetsState = dataBets.$$state.value;
+            dataBets.then(function(resBetsState) {
+                console.log(resBetsState);
+            });
+           
             var dataUsers = UserService.deleteUser(idUser);
             var resUsersState = dataUsers.$$state.value;
             dataUsers.then(function(resUsersState) {
                 console.log(resUsersState);
                 $scope.usersInfo = JSON.parse(JSON.stringify(resUsersState));
             });
+
+            
         }
     }
 
