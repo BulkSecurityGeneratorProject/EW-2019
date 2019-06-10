@@ -22,7 +22,9 @@
             newBetTie : newBetTie,
             closedBets : closedBets,
             openBets: openBets,
-            deleteBetsFromUser : deleteBetsFromUser
+            deleteBetsFromUser : deleteBetsFromUser,
+            openBetsAndRecentlyClosed :  openBetsAndRecentlyClosed,
+            betsHistoric : betsHistoric
         };
 
         return service;
@@ -108,6 +110,42 @@
             var temp = {};
             var result = $q.defer();
             $http.get('http://localhost:8083/api/apostas/apagaApostas/utilizador/' + idUser)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function deleteBetsFromUser(idUser) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8083/api/apostas/apagaApostas/utilizador/' + idUser)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function openBetsAndRecentlyClosed(idUser) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8083/api/apostas/apostasAbertas/' + idUser)
+                .success(function (data) {
+
+                    temp = data;
+                    result.resolve(data);
+                });
+            return result.promise;
+        };
+
+        function betsHistoric(idUser) {
+            var temp = {};
+            var result = $q.defer();
+            $http.get('http://localhost:8083/api/apostas/historico/' + idUser)
                 .success(function (data) {
 
                     temp = data;

@@ -16,6 +16,10 @@
         console.log(localStorage.getItem("userPremium"));
         console.log(localStorage.getItem("userNormal"));
 
+        $scope.ehPremium = false;
+        if (localStorage.getItem("userPremium") === "true" || localStorage.getItem("userAdmin") === "true")
+            $scope.ehPremium = true;
+
         $scope.ehAdmin = false;
         if (localStorage.getItem("userAdmin") === "true")
             $scope.ehAdmin = true;
@@ -97,6 +101,14 @@
 
         $scope.bets = function() {
             $state.go('adminbet');
+        }
+
+        $scope.betsHistoric = function () {
+            $state.go('betsHistoric');
+        }
+
+        $scope.betsRegisted = function () {
+            $state.go('betsRegisted');
         }
     }
 

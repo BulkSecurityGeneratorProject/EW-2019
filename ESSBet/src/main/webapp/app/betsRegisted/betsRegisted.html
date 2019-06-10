@@ -1,0 +1,107 @@
+<div  class="col-sm-12">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href ng-click="main()">ESSBettingHouse <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="profile()">Profile </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="betsRegisted()">Bets </a>
+                </li>
+                <li class="nav-item" ng-show="(ehPremium)">
+                    <a class="nav-link" href ng-click="betsHistoric()">Historic </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="premium()">Premium </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="addcoin()">Add Money </a>
+                </li>
+                <li class="nav-item dropdown" ng-show="(ehAdmin)">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin Area
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href ng-click="users()">Manage Users </a>
+                    <a class="dropdown-item" href ng-click="events()">Manage Events </a>
+                    <a class="dropdown-item" href ng-click="bets()">Manage Bets </a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a  class="nav-link" href ng-click="logout()">Logout </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="col-sm-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Bet ID</th>
+                            <th scope="col">Bet State</th>
+                            <th scope="col">Money betted</th>
+                            <th scope="col">User ID</th>
+                            <th scope="col">User name</th>
+                            <th scope="col">User email</th>
+                            <th scope="col">Event ID</th>
+                            <th scope="col">Event Begin</th>
+                            <th scope="col">Event End</th>
+                            <th scope="col">Event State</th>
+                            <th scope="col">Event Sport</th>
+                            <th scope="col">Event Tie Odd</th>
+                            <th scope="col">Public Event?</th>
+                            <th scope="col">Participant Bet</th>
+                            <th scope="col">Odd Bet</th>
+                            <th scope="col">Event other participantes</th>
+                            <th scope="col">Winner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="z in betsInfo track by $index">
+                            <td>{{betsInfo[$index].id}}</td>
+                            <td>{{betsInfo[$index].estado}}</td>
+                            <td>{{betsInfo[$index].montante}}</td>
+                            <td>{{betsInfo[$index].utilizador_id}}</td>
+                            <td>{{betsInfo[$index].utilizador_nome}}</td>
+                            <td>{{betsInfo[$index].utilizador_email}}</td>
+                            <td>{{betsInfo[$index].evento_id}}</td>
+                            <td>{{betsInfo[$index].evento_Inicio}}</td>
+                            <td>{{betsInfo[$index].evento_Fim}}</td>
+                            <td>{{betsInfo[$index].evento_estado}}</td>
+                            <td>{{betsInfo[$index].evento_desporto}}</td>
+                            <td>{{betsInfo[$index].evento_oddEmpate}}</td>
+                            <td>{{betsInfo[$index].evento_publico}}</td>
+                            <td>{{betsInfo[$index].participante_nome}}</td>
+                            <td>{{betsInfo[$index].participante_odd}}</td>
+                            <td>
+                                <select>
+                                    <option>Participants</option>
+                                    <option ng-repeat="z in betsInfo[$index].outrosParticipante">Name:{{z.nome}}
+                                        Odd:{{z.odd_vencer}}</option>
+                                </select>
+                            </td>
+                            <td>{{betsInfo[$index].evento_vencedor}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+</div>

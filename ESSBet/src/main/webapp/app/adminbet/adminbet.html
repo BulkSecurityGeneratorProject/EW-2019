@@ -13,6 +13,12 @@
                     <a class="nav-link" href ng-click="profile()">Profile </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href ng-click="betsRegisted()">Bets </a>
+                </li>
+                <li class="nav-item" ng-show="(ehPremium)">
+                    <a class="nav-link" href ng-click="betsHistoric()">Historic </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href ng-click="premium()">Premium </a>
                 </li>
                 <li class="nav-item">
@@ -144,7 +150,7 @@
                                         <option ng-repeat="z in betsClosedInfo[$index].outrosParticipante">Name:{{z.nome}}
                                             Odd:{{z.odd_vencer}}</option>
                                     </select>
-                                    td>{{betsClosedInfo[$index].evento_vencedor}}</td>
+                                    <td>{{betsClosedInfo[$index].evento_vencedor}}</td>
                                 </td>
                             </tr>
                         </tbody>

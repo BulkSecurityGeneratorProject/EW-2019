@@ -13,7 +13,11 @@
         $scope.ehAdmin = false;
         if (localStorage.getItem("userAdmin") === "true")
             $scope.ehAdmin = true;
-            
+
+        $scope.ehPremium = false;
+        if (localStorage.getItem("userPremium") === "true" || localStorage.getItem("userAdmin") === "true")
+            $scope.ehPremium = true;
+
         $scope.publicEvents;
         $scope.allOpenEvents;
 
@@ -61,6 +65,14 @@
         //vai para a pagina home para efetuar login
         $scope.logout = function () {
             $state.go('home');
+        }
+
+        $scope.betsHistoric = function () {
+            $state.go('betsHistoric');
+        }
+
+        $scope.betsRegisted = function () {
+            $state.go('betsRegisted');
         }
 
         $scope.premium = function () {

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -14,6 +14,10 @@
         if (localStorage.getItem("userAdmin") === "true")
             $scope.ehAdmin = true;
 
+        $scope.ehPremium = false;
+        if (localStorage.getItem("userPremium") === "true" || localStorage.getItem("userAdmin") === "true")
+            $scope.ehPremium = true;
+
         $scope.userInfo = JSON.parse(localStorage.getItem("userInfo"));
         $scope.userGroup = "";
         if (localStorage.getItem("userAdmin") === "true") {
@@ -28,38 +32,46 @@
 
 
 
-        $scope.main = function() {
+        $scope.main = function () {
             $state.go('main');
         }
 
 
-        $scope.profile = function() {
+        $scope.profile = function () {
             $state.go('profile');
         }
 
 
-        $scope.logout = function() {
+        $scope.logout = function () {
             $state.go('home');
         }
 
-        $scope.premium = function() {
+        $scope.premium = function () {
             $state.go('premium');
         }
 
-        $scope.addcoin = function() {
+        $scope.addcoin = function () {
             $state.go('addcoin');
         }
 
-        $scope.users = function() {
+        $scope.users = function () {
             $state.go('adminuser');
         }
 
-        $scope.events = function() {
+        $scope.events = function () {
             $state.go('adminevent');
         }
 
-        $scope.bets = function() {
+        $scope.bets = function () {
             $state.go('adminbet');
+        }
+
+        $scope.betsHistoric = function () {
+            $state.go('betsHistoric');
+        }
+
+        $scope.betsRegisted = function () {
+            $state.go('betsRegisted');
         }
     }
 })();

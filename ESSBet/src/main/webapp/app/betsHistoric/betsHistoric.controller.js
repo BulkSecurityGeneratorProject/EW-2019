@@ -3,13 +3,18 @@
 
     angular
         .module('essBettingHouse')
-        .controller('AdminuserController', AdminuserController);
+        .controller('BetsHistoricController', BetsHistoricController);
 
-    AdminuserController.$inject = ['$scope', 'Principal', '$state', '$rootScope', 'UserService', 'BetsService']
+        BetsHistoricController.$inject = ['$scope', 'Principal', '$state', '$rootScope', 'BetsService', 'UserService']
 
-    function AdminuserController($scope, Principal, $state, $rootScope, UserService, BetsService) {
+    function BetsHistoricController($scope, Principal, $state, $rootScope, BetsService, UserService) {
         var vm = this;
 
+        $scope.erroAmount = "";
+        $scope.erroPlafond = "";
+
+        $scope.userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        
         $scope.ehPremium = false;
         if (localStorage.getItem("userPremium") === "true" || localStorage.getItem("userAdmin") === "true")
             $scope.ehPremium = true;
@@ -17,18 +22,15 @@
         $scope.ehAdmin = false;
         if (localStorage.getItem("userAdmin") === "true")
             $scope.ehAdmin = true;
-            
-        $scope.usersInfo;
-        $scope.groupInfo = [];
 
-        var dataUsers = UserService.allUsers();
-        var resUsersState = dataUsers.$$state.value;
-        dataUsers.then(function(resUsersState) {
-            console.log(resUsersState);
+        $scope.betsInfo;
+        var dataBets = BetsService.betsHistoric($scope.userInfo.id);
+        var resBetsState = dataBets.$$state.value;
+        dataBets.then(function (resBetsState) {
+            console.log(resBetsState);
 
-            $scope.usersInfo = JSON.parse(JSON.stringify(resUsersState));
+            $scope.betsInfo = JSON.parse(JSON.stringify(resBetsState));
         });
-
 
         $scope.main = function() {
             $state.go('main');
@@ -72,22 +74,7 @@
             $state.go('betsRegisted');
         }
 
-        $scope.removeUser = function(idUser) {
-            var dataBets = BetsService.deleteBetsFromUser(idUser);
-            var resBetsState = dataBets.$$state.value;
-            dataBets.then(function(resBetsState) {
-                console.log(resBetsState);
-            });
-           
-            var dataUsers = UserService.deleteUser(idUser);
-            var resUsersState = dataUsers.$$state.value;
-            dataUsers.then(function(resUsersState) {
-                console.log(resUsersState);
-                $scope.usersInfo = JSON.parse(JSON.stringify(resUsersState));
-            });
 
-            
-        }
     }
 
 })();
