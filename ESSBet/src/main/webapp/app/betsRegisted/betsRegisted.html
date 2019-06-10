@@ -46,17 +46,15 @@
 <div class="col-sm-12">
     <div class="container">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-12">
+                <br>
+                <h5>All Bets</h5>
+                <br>
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Bet ID</th>
                             <th scope="col">Bet State</th>
                             <th scope="col">Money betted</th>
-                            <th scope="col">User ID</th>
-                            <th scope="col">User name</th>
-                            <th scope="col">User email</th>
-                            <th scope="col">Event ID</th>
                             <th scope="col">Event Begin</th>
                             <th scope="col">Event End</th>
                             <th scope="col">Event State</th>
@@ -71,13 +69,8 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="z in betsInfo track by $index">
-                            <td>{{betsInfo[$index].id}}</td>
                             <td>{{betsInfo[$index].estado}}</td>
                             <td>{{betsInfo[$index].montante}}</td>
-                            <td>{{betsInfo[$index].utilizador_id}}</td>
-                            <td>{{betsInfo[$index].utilizador_nome}}</td>
-                            <td>{{betsInfo[$index].utilizador_email}}</td>
-                            <td>{{betsInfo[$index].evento_id}}</td>
                             <td>{{betsInfo[$index].evento_Inicio}}</td>
                             <td>{{betsInfo[$index].evento_Fim}}</td>
                             <td>{{betsInfo[$index].evento_estado}}</td>
@@ -97,10 +90,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="col-sm-1">
-            </div>
-            <div class="col-sm-2">
             </div>
         </div>
     </div>
