@@ -1,0 +1,126 @@
+<div class="col-sm-12" ng-show="(ehAdmin)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href ng-click="main()">ESSBettingHouse <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="profile()">Profile </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="betsRegisted()">Bets </a>
+                </li>
+                <li class="nav-item" ng-show="(ehPremium)">
+                    <a class="nav-link" href ng-click="betsHistoric()">Historic </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="premium()">Premium </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="addcoin()">Add Money </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Admin Area
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href ng-click="users()">Manage Users </a>
+                        <a class="dropdown-item" href ng-click="events()">Manage Events </a>
+                        <a class="dropdown-item" href ng-click="bets()">Manage Bets </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href ng-click="logout()">Logout </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="col-sm-12">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <br>
+                    <h5>Add a new Event</h5>
+                    <br>
+                    <div class="form-group">
+                        <label for="exampleInputBegintime">Begin Time:</label>
+                        <input type="datetime-local"  class="form-control" id="exampleInputBegintime"
+                            placeholder="Enter Begin time" ng-model="timeB">
+                        <label for="exampleInputEndtime">End Time:</label>
+                        <input type="datetime-local" class="form-control" id="exampleInputEndtime"
+                            placeholder="Enter End time" ng-model="timeE">
+                        <label for="exampleInputSport">Sport:</label>
+                        <input type="text" class="form-control" id="exampleInputSport" placeholder="Enter the Sport"
+                            ng-model="sportEv">
+                        <label for="exampleInputTimeevent">Team Event:</label>
+                        <form>
+                            Yes <input type="radio" ng-model="teamEv" value="true">
+                            No <input type="radio" ng-model="teamEv" value="false">
+                        </form>
+
+                        <label for="exampleInputTie">Tie Odd:</label>
+                        <input type="number" step="0.1" class="form-control" id="exampleInputTie"
+                            placeholder="Enter the Tie Odd" ng-model="oddVen">
+                        <label class="form-check-label" for="exampleCheck1">Public Event</label>
+                        <form>
+                            Yes <input type="radio" ng-model="publicEv" value="true">
+                            No <input type="radio" ng-model="publicEv" value="false">
+                        </form>
+
+                        <br>
+
+                        <label for="exampleInputNP">Number of participants:</label>
+                        <input type="number" step="1" class="form-control" id="exampleInputTie"
+                            placeholder="Enter the number of participants" ng-model="nPart">
+                            {{msgErro}}
+                        <br>
+                        <button type="button" class="btn btn-primary"
+                            ng-click="newEv(timeB, timeE, nPart, teamEv, oddVen, sportEv, publicEv)">Next Step</button>
+                    </div>
+
+                    
+                    <div class="form-group" ng-repeat="n in participantesInfo track by $index">
+                        <h5>Participante {{$index + 1}}:</h5>
+                        <label for="exampleInputNP">Name:</label>
+                        <input type="text" step="1" class="form-control" id="exampleInputTie" placeholder="Name"
+                            ng-model="namePart">
+                        <label for="exampleInputNP">Country:</label>
+                        <input type="text" step="1" class="form-control" id="exampleInputTie" placeholder="Country"
+                            ng-model="countryPart">
+                        <label for="exampleInputNP">Team:</label>
+                        <input type="text" step="1" class="form-control" id="exampleInputTie" placeholder="Team"
+                            ng-model="teamPart">
+                        <label for="exampleInputNP">Odd:</label>
+                        <input type="number" step="0.1" class="form-control" id="exampleInputTie" placeholder="Odd"
+                            ng-model="oddPart">
+                        {{msgErroPart}}
+                        <br>
+                        <button type="button" class="btn btn-primary"
+                            ng-click="newPart(namePart, countryPart, teamPart, oddPart)">Add Participant</button>
+                        
+                    </div>
+                    {{msgErroAll}}
+                    <br>
+                    <button type="button" class="btn btn-primary"
+                    ng-click="concludeRegistry()">Regist</button>
+                </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+</div>
