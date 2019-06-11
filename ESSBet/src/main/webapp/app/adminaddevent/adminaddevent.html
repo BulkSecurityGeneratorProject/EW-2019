@@ -96,8 +96,10 @@
 
                             $("#add-another").click(function() {
                                 form_count ++;
-
-                                element = $('<input type="text" class="form-control" id="exampleInputTie" placeholder="Enter a Participant"/>');
+                                //--------------------------------------------------------------------------------------------------------------------------------------------------
+                                //LAMEIRAS aqui acrescentas os ng-model para cada input
+                                //---------------------------------------------------------------------------------------------------------------------------------------------
+                                element = $('<input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Name"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Team"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Country"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Odd"/><br>');
                                 element.attr('name', 'extra_field_' + form_count);
                                 $("#forms").append(element);
                                 // build element and append it to our forms container
