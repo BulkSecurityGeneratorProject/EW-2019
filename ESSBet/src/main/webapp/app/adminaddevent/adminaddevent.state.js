@@ -17,7 +17,7 @@
             views: {
                 'content@': {
                     templateUrl: 'app/adminaddevent/adminaddevent.html',
-                    controller: 'AdmineventController',
+                    controller: 'AdminaddeventController',
                     controllerAs: 'vm'
                 }
             },
