@@ -55,6 +55,7 @@
                         <tr>
                             <th scope="col">Bet State</th>
                             <th scope="col">Money betted</th>
+                            <th scope="col">Money (Result)</th>
                             <th scope="col">Event Begin</th>
                             <th scope="col">Event End</th>
                             <th scope="col">Event State</th>
@@ -71,6 +72,7 @@
                         <tr ng-repeat="z in betsInfo track by $index">
                             <td>{{betsInfo[$index].estado}}</td>
                             <td>{{betsInfo[$index].montante}}</td>
+                            <td>{{betsInfo[$index].resultado}}</td>
                             <td>{{betsInfo[$index].evento_Inicio}}</td>
                             <td>{{betsInfo[$index].evento_Fim}}</td>
                             <td>{{betsInfo[$index].evento_estado}}</td>

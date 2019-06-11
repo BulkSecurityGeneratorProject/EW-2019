@@ -58,24 +58,59 @@
                     <br>
                     <div class="form-group">
                         <label for="exampleInputBegintime">Begin Time:</label>
-                        <input type="text" class="form-control" id="exampleInputBegintime"  placeholder="Enter Begin time" ng-model="">
+                        <input type="datetime-local" class="form-control" id="exampleInputBegintime"
+                            placeholder="Enter Begin time" ng-model="beginTime">
                         <label for="exampleInputEndtime">End Time:</label>
-                        <input type="text" class="form-control" id="exampleInputEndtime" placeholder="Enter End time" ng-model="">
+                        <input type="datetime-local" class="form-control" id="exampleInputEndtime"
+                            placeholder="Enter End time" ng-model="endTime">
                         <label for="exampleInputSport">Sport:</label>
-                        <input type="text" class="form-control" id="exampleInputSport" placeholder="Enter the Sport" ng-model="">
-                        <label for="exampleInputSport">Sport:</label>
-                        <input type="text" class="form-control" id="exampleInputSport" placeholder="Enter the Sport" ng-model="">
-                        <label for="exampleInputTimeevent">Time Event:</label>
-                        <input type="text" class="form-control" id="exampleInputTimeevent" placeholder="Enter the Time Event" ng-model="">
+                        <input type="text" class="form-control" id="exampleInputSport" placeholder="Enter the Sport"
+                            ng-model="sport">
+                        <label for="exampleInputTimeevent">Team Event:</label>
+                        <form>
+                            Yes <input type="radio" ng-model="teamEvent" value="false">
+                            No <input type="radio" ng-model="teamEvent" value="true">
+                        </form>
+
                         <label for="exampleInputTie">Tie Odd:</label>
-                        <input type="text" class="form-control" id="exampleInputTie" placeholder="Enter the Tie Odd" ng-model="">
+                        <input type="number" class="form-control" id="exampleInputTie" placeholder="Enter the Tie Odd"
+                            ng-model="oddTie">
                         <label class="form-check-label" for="exampleCheck1">Public Event</label>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="" placeholder="Yes">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck2" ng-model="" placeholder="No">
-                        <label for="exampleInputNP">Number of participants:</label>
-                        <input type="text" class="form-control" id="exampleInputNP" placeholder="Enter Number of participants" ng-model="">
+                        <form>
+                            Yes <input type="radio" ng-model="publicEvent" value="false">
+                            No <input type="radio" ng-model="publicEvent" value="true">
+                        </form>
+
                         <br>
-                        <button type="button" class="btn btn-primary" ng-click="">Add Event</button>
+                        <div id="forms"  class="form-group">
+                            <label for="exampleInputNP">Number of participants:</label>
+                            {{ form.as_p }}>
+                        </div>
+                        <br>
+                        <button id="add-another" class="btn btn-primary">Add participants</button>
+                        <br>
+
+                        <script>
+                            form_count = Number($("[name=extra_field_count]").val());
+                            // get extra form count so we know what index to use for the next item.
+
+                            $("#add-another").click(function() {
+                                form_count ++;
+
+                                element = $('<input type="text"/>');
+                                element.attr('name', 'extra_field_' + form_count);
+                                $("#forms").append(element);
+                                // build element and append it to our forms container
+
+                                $("[name=extra_field_count]").val(form_count);
+                                // increment form count so our view knows to populate
+                                // that many fields for validation
+                            })
+                        </script>
+
+                        <br>
+
+                        <button type="button" class="btn btn-primary" ng-click="addEvent(beginTime,endTime,sport,teamEvent,oddTie,publicEvent,nParticipants)">Add Event</button>
                     </div>
                 </div>
             </div>
