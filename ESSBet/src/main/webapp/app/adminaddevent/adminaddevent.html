@@ -84,7 +84,7 @@
                         <br>
                         <div id="forms"  class="form-group">
                             <label for="exampleInputNP">Number of participants:</label>
-                            {{ form.as_p }}>
+                            {{ form.as_p }}
                         </div>
                         <br>
                         <button id="add-another" class="btn btn-primary">Add participants</button>
@@ -97,7 +97,7 @@
                             $("#add-another").click(function() {
                                 form_count ++;
 
-                                element = $('<input type="text"/>');
+                                element = $('<input type="text" class="form-control" id="exampleInputTie" placeholder="Enter a Participant"/>');
                                 element.attr('name', 'extra_field_' + form_count);
                                 $("#forms").append(element);
                                 // build element and append it to our forms container
