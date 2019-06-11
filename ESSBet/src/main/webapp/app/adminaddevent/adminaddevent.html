@@ -58,62 +58,65 @@
                     <br>
                     <div class="form-group">
                         <label for="exampleInputBegintime">Begin Time:</label>
-                        <input type="datetime-local" class="form-control" id="exampleInputBegintime"
-                            placeholder="Enter Begin time" ng-model="beginTime">
+                        <input type="datetime-local"  class="form-control" id="exampleInputBegintime"
+                            placeholder="Enter Begin time" ng-model="timeB">
                         <label for="exampleInputEndtime">End Time:</label>
                         <input type="datetime-local" class="form-control" id="exampleInputEndtime"
-                            placeholder="Enter End time" ng-model="endTime">
+                            placeholder="Enter End time" ng-model="timeE">
                         <label for="exampleInputSport">Sport:</label>
                         <input type="text" class="form-control" id="exampleInputSport" placeholder="Enter the Sport"
-                            ng-model="sport">
+                            ng-model="sportEv">
                         <label for="exampleInputTimeevent">Team Event:</label>
                         <form>
-                            Yes <input type="radio" ng-model="teamEvent" value="false">
-                            No <input type="radio" ng-model="teamEvent" value="true">
+                            Yes <input type="radio" ng-model="teamEv" value="true">
+                            No <input type="radio" ng-model="teamEv" value="false">
                         </form>
 
                         <label for="exampleInputTie">Tie Odd:</label>
-                        <input type="number" class="form-control" id="exampleInputTie" placeholder="Enter the Tie Odd"
-                            ng-model="oddTie">
+                        <input type="number" step="0.1" class="form-control" id="exampleInputTie"
+                            placeholder="Enter the Tie Odd" ng-model="oddVen">
                         <label class="form-check-label" for="exampleCheck1">Public Event</label>
                         <form>
-                            Yes <input type="radio" ng-model="publicEvent" value="false">
-                            No <input type="radio" ng-model="publicEvent" value="true">
+                            Yes <input type="radio" ng-model="publicEv" value="true">
+                            No <input type="radio" ng-model="publicEv" value="false">
                         </form>
 
                         <br>
-                        <div id="forms"  class="form-group">
-                            <label for="exampleInputNP">Number of participants:</label>
-                            {{ form.as_p }}
-                        </div>
+
+                        <label for="exampleInputNP">Number of participants:</label>
+                        <input type="number" step="1" class="form-control" id="exampleInputTie"
+                            placeholder="Enter the number of participants" ng-model="nPart">
+                            {{msgErro}}
                         <br>
-                        <button id="add-another" class="btn btn-primary">Add participants</button>
-                        <br>
-
-                        <script>
-                            form_count = Number($("[name=extra_field_count]").val());
-                            // get extra form count so we know what index to use for the next item.
-
-                            $("#add-another").click(function() {
-                                form_count ++;
-                                //--------------------------------------------------------------------------------------------------------------------------------------------------
-                                //LAMEIRAS aqui acrescentas os ng-model para cada input
-                                //---------------------------------------------------------------------------------------------------------------------------------------------
-                                element = $('<input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Name"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Team"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Country"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Odd"/><br>');
-                                element.attr('name', 'extra_field_' + form_count);
-                                $("#forms").append(element);
-                                // build element and append it to our forms container
-
-                                $("[name=extra_field_count]").val(form_count);
-                                // increment form count so our view knows to populate
-                                // that many fields for validation
-                            })
-                        </script>
-
-                        <br>
-
-                        <button type="button" class="btn btn-primary" ng-click="addEvent(beginTime,endTime,sport,teamEvent,oddTie,publicEvent,nParticipants)">Add Event</button>
+                        <button type="button" class="btn btn-primary"
+                            ng-click="newEv(timeB, timeE, nPart, teamEv, oddVen, sportEv, publicEv)">Next Step</button>
                     </div>
+
+                    
+                    <div class="form-group" ng-repeat="n in participantesInfo track by $index">
+                        <h5>Participante {{$index + 1}}:</h5>
+                        <label for="exampleInputNP">Name:</label>
+                        <input type="text" step="1" class="form-control" id="exampleInputTie" placeholder="Name"
+                            ng-model="namePart">
+                        <label for="exampleInputNP">Country:</label>
+                        <input type="text" step="1" class="form-control" id="exampleInputTie" placeholder="Country"
+                            ng-model="countryPart">
+                        <label for="exampleInputNP">Team:</label>
+                        <input type="text" step="1" class="form-control" id="exampleInputTie" placeholder="Team"
+                            ng-model="teamPart">
+                        <label for="exampleInputNP">Odd:</label>
+                        <input type="number" step="0.1" class="form-control" id="exampleInputTie" placeholder="Odd"
+                            ng-model="oddPart">
+                        {{msgErroPart}}
+                        <br>
+                        <button type="button" class="btn btn-primary"
+                            ng-click="newPart(namePart, countryPart, teamPart, oddPart)">Add Participant</button>
+                        
+                    </div>
+                    {{msgErroAll}}
+                    <br>
+                    <button type="button" class="btn btn-primary"
+                    ng-click="concludeRegistry()">Regist</button>
                 </div>
             </div>
             <div class="col-sm-2">
