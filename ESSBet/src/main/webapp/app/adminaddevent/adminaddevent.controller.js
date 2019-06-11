@@ -10,7 +10,7 @@
     function AdminaddeventController($scope, Principal, $state, $rootScope) {
         var vm = this;
 
-       
+
         $scope.msgErro = "";
 
         $scope.main = function() {
@@ -55,7 +55,7 @@
             $state.go('betsRegisted');
         }
 
-        $scope.addEvent = function(beginTime,endTime,sport,teamEvent,oddTie,publicEvent,nParticipants){
+        $scope.addEvent1 = function(beginTime, endTime, sport, teamEvent, oddTie, publicEvent, nParticipants) {
             console.log(beginTime);
             console.log(endTime);
             console.log(sport);
@@ -63,9 +63,10 @@
             console.log(oddTie);
             console.log(publicEvent);
             console.log(nParticipants);
-            
-        } 
+            console.log("hoho");
+            $state.go('adminevent');
+
+        }
 
     }
-
 })();

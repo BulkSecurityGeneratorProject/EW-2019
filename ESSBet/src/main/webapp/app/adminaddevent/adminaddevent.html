@@ -82,37 +82,19 @@
                         </form>
 
                         <br>
-                        <div id="forms"  class="form-group">
+                        <div id="forms" >
                             <label for="exampleInputNP">Number of participants:</label>
                             {{ form.as_p }}
                         </div>
                         <br>
-                        <button id="add-another" class="btn btn-primary">Add participants</button>
+                        <button  type="button"id="add-another" class="btn btn-primary">Add participants</button>
                         <br>
 
-                        <script>
-                            form_count = Number($("[name=extra_field_count]").val());
-                            // get extra form count so we know what index to use for the next item.
 
-                            $("#add-another").click(function() {
-                                form_count ++;
-                                //--------------------------------------------------------------------------------------------------------------------------------------------------
-                                //LAMEIRAS aqui acrescentas os ng-model para cada input
-                                //---------------------------------------------------------------------------------------------------------------------------------------------
-                                element = $('<input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Name"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Team"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Country"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Odd"/><br>');
-                                element.attr('name', 'extra_field_' + form_count);
-                                $("#forms").append(element);
-                                // build element and append it to our forms container
-
-                                $("[name=extra_field_count]").val(form_count);
-                                // increment form count so our view knows to populate
-                                // that many fields for validation
-                            })
-                        </script>
 
                         <br>
 
-                        <button type="button" class="btn btn-primary" ng-click="addEvent(beginTime,endTime,sport,teamEvent,oddTie,publicEvent,nParticipants)">Add Event</button>
+                        <button type="button" class="btn btn-primary" ng-click="addEvent1(beginTime,endTime,sport,teamEvent,oddTie,publicEvent,nParticipants)">Add Event</button>
                     </div>
                 </div>
             </div>
@@ -121,3 +103,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    form_count = Number($("[name=extra_field_count]").val());
+    // get extra form count so we know what index to use for the next item.
+
+    $("#add-another").click(function() {
+        form_count ++;
+        //--------------------------------------------------------------------------------------------------------------------------------------------------
+        //LAMEIRAS aqui acrescentas os ng-model para cada input
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        element = $('<input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Name"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Team"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Country"/><input type="text" class="form-control" id="exampleInputTie" placeholder="Enter Odd"/><br>');
+        element.attr('name', 'extra_field_' + form_count);
+        $("#forms").append(element);
+        // build element and append it to our forms container
+
+        $("[name=extra_field_count]").val(form_count);
+        // increment form count so our view knows to populate
+        // that many fields for validation
+    })
+</script>
