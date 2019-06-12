@@ -59,17 +59,15 @@
             <div class="col-sm-1">
             </div>
             <div class="col-sm-10">
-
+                <br>
                 <div class="ai" ng-show="(seePrivateEvents)" ng-repeat="x in allOpenEvents track by $index">
                     <div class="form-group">
-                        <br>
                         <label for="exampleInputName"> IDENT: {{allOpenEvents[$index].id}}  START: {{allOpenEvents[$index].horaInicio}} END: {{allOpenEvents[$index].horaFim}}
                            SPORT: {{allOpenEvents[$index].desporto}} PUBLIC: {{allOpenEvents[$index].publico}} ODD_TIE: {{allOpenEvents[$index].odd_empate}} Nº PART: {{allOpenEvents[$index].n_participante}} </label>
                         <button type="button" class="btn btn-primary" ng-click="bet(allOpenEvents[$index].id,allOpenEvents[$index].odd_empate)">Bet</button>
                     </div>
                 </div>
-
-
+                <br>
                 <div class="ai" ng-show="!(seePrivateEvents)" ng-repeat="x in publicEvents track by $index">
                     <div class="form-group">
                         <br>
@@ -77,12 +75,9 @@
                                 SPORT: {{publicEvents[$index].desporto}} PUBLIC: {{publicEvents[$index].publico}} ODD_TIE: {{publicEvents[$index].odd_empate}} Nº PART: {{publicEvents[$index].n_participante}} </label>
                         <button type="button" class="btn btn-primary" ng-click="bet(publicEvents[$index].id, publicEvents[$index].odd_empate)">Bet</button>
                     </div>
-
                 </div>
-
+                <br>
             </div>
-
-
             <div class="col-sm-1">
             </div>
         </div>
